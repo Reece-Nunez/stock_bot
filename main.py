@@ -1,5 +1,5 @@
 import os
-import logging
+from logger_config import logger
 import asyncio
 from alerts.alerts import send_alert
 from loguru import logger
@@ -14,10 +14,10 @@ from backtest.backtester import Backtester
 # Configure Loguru
 logger.add("stock_bot_logs.log", rotation="10 MB")
 
-# Configure Logging
-logging.basicConfig(
+# Configure logger
+logger.basicConfig(
     filename="stock_bot_logs.log",
-    level=logging.INFO,
+    level=logger.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
@@ -27,7 +27,7 @@ API_SECRET = os.getenv("ALPACA_API_SECRET")
 BASE_URL = os.getenv("ALPACA_BASE_URL")
 
 if not API_KEY or not API_SECRET or not BASE_URL:
-    logging.error("API credentials or BASE_URL are not set.")
+    logger.error("API credentials or BASE_URL are not set.")
     raise EnvironmentError("API credentials or BASE_URL are not set.")
 
 # Initialize Analytics
@@ -46,7 +46,7 @@ strategies = {
 default_strategy = "rsi"  # Default active strategy
 
 # Log active strategy at the start of the loop
-logging.info(f"Active strategy: {default_strategy}")
+logger.info(f"Active strategy: {default_strategy}")
 
 # Parameters
 risk_per_trade = 0.02
@@ -64,7 +64,7 @@ async def execute_trades(current_strategy: str = default_strategy):
             # Fetch historical data
             data = fetcher.get_historical_data(symbol, "minute", limit=100)
             if data.empty:
-                logging.warning(f"No data available for {symbol}. Retrying in 60 seconds.")
+                logger.warning(f"No data available for {symbol}. Retrying in 60 seconds.")
                 await asyncio.sleep(60)
                 continue
 
@@ -83,7 +83,7 @@ async def execute_trades(current_strategy: str = default_strategy):
                         take_profit_pct=take_profit_pct,
                     )
                     analytics.update_trade(100, current_strategy) # Simulate profit/loss
-                    logging.info(f"Buy signal triggered for {symbol}.")
+                    logger.info(f"Buy signal triggered for {symbol}.")
                 elif signal == -1:  # Sell
                     order_manager.place_dynamic_bracket_order(
                         symbol,
@@ -93,17 +93,17 @@ async def execute_trades(current_strategy: str = default_strategy):
                         take_profit_pct=take_profit_pct,
                     )
                     analytics.update_trade(-50, current_strategy) # Simulate profit/loss
-                    logging.info(f"Sell signal triggered for {symbol}.")
+                    logger.info(f"Sell signal triggered for {symbol}.")
                 last_signal = signal
                 
                 # Dynamic strategy switching based on sentiment or analytics
                 if analytics.sentiment_scores.get("market_sentiment", 0) < -0.5:
                     default_strategy = "bollinger"
-                    logging.info(f"Switched strategy to Bollinger due to negative market sentiment.")
+                    logger.info(f"Switched strategy to Bollinger due to negative market sentiment.")
     
 
         except Exception as e:
-            logging.error(f"Error in trade execution loop for {symbol}: {e}")
+            logger.error(f"Error in trade execution loop for {symbol}: {e}")
 
         await asyncio.sleep(60)  # Run the loop every 60 seconds
         
@@ -113,7 +113,7 @@ def backtest_strategy(strategy_name, historical_data):
     backtester = Backtester(strategy)
     results = backtester.run(historical_data)
     analytics.update_trade(results - fetcher.get_portfolio_gain_loss()["current_equity"], strategy_name)
-    logging.info(f"Backtest results for {strategy_name}: {results}")
+    logger.info(f"Backtest results for {strategy_name}: {results}")
     return results
 
 if __name__ == "__main__":

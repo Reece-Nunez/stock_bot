@@ -7,7 +7,7 @@ from strategies.bollinger_strategy import BollingerBandsStrategy
 from trading.order_manager import OrderManager
 from analytics.analytics import Analytics
 import os
-import logging
+from logger_config import logger
 from threading import Thread
 
 # Flask App Initialization
@@ -16,10 +16,10 @@ app = Flask(__name__)
 # Initialize SocketIO
 socketio = SocketIO(app)
 
-# Configure Logging
-logging.basicConfig(
+# Configure logger
+logger.basicConfig(
     filename="app_logs.log",
-    level=logging.INFO,
+    level=logger.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
@@ -29,7 +29,7 @@ API_SECRET = os.getenv("ALPACA_API_SECRET")
 BASE_URL = os.getenv("ALPACA_BASE_URL")
 
 if not API_KEY or not API_SECRET or not BASE_URL:
-    logging.error("API credentials or BASE_URL are not set.")
+    logger.error("API credentials or BASE_URL are not set.")
     raise EnvironmentError("API credentials or BASE_URL are not set.")
 
 # Initialize Modules
@@ -64,7 +64,7 @@ def dashboard():
             current_strategy=current_strategy
         )
     except Exception as e:
-        logging.error(f"Error rendering dashboard: {e}")
+        logger.error(f"Error rendering dashboard: {e}")
         return "An error occurred while loading the dashboard."
 
 
@@ -79,19 +79,19 @@ def update_strategy():
         if strategy in strategies:
             current_strategy = strategy
             analytics.update_current_strategy(strategy)
-            logging.info(f"Updated trading strategy to: {strategy}")
+            logger.info(f"Updated trading strategy to: {strategy}")
             return jsonify({"status": "success", "message": f"Strategy updated to {strategy}"}), 200
         else:
-            logging.warning(f"Invalid strategy update attempt: {strategy}")
+            logger.warning(f"Invalid strategy update attempt: {strategy}")
             return jsonify({"status": "error", "message": "Invalid strategy selected."}), 400
     except Exception as e:
-        logging.error(f"Failed to update strategy: {e}")
+        logger.error(f"Failed to update strategy: {e}")
         return jsonify({"status": "error", "message": "Error updating strategy."}), 500
 
 
 @socketio.on("connect")
 def handle_connect():
-    logging.info("Client connected to WebSocket.")
+    logger.info("Client connected to WebSocket.")
 
 
 def broadcast_real_time_data():
@@ -102,7 +102,7 @@ def broadcast_real_time_data():
             analytics_data = analytics.get_analytics()
             socketio.emit("real_time_data", {"portfolio": portfolio, "analytics": analytics_data})
         except Exception as e:
-            logging.error(f"Error in broadcasting real-time data: {e}")
+            logger.error(f"Error in broadcasting real-time data: {e}")
 
 
 if __name__ == "__main__":

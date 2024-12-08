@@ -1,4 +1,4 @@
-import logging
+from logger_config import logger
 import numpy as np
 import pandas as pd
 from datetime import datetime
@@ -33,12 +33,12 @@ class Analytics:
         self.strategy_performance[strategy]["trades"] += 1
         self.strategy_performance[strategy]["profit"] += profit_loss
 
-        logging.info(f"Trade updated. Profit/Loss: {profit_loss}, Strategy: {strategy}, Total Profit: {self.total_profit}")
+        logger.info(f"Trade updated. Profit/Loss: {profit_loss}, Strategy: {strategy}, Total Profit: {self.total_profit}")
 
         def update_sector_analysis(self, sector_data):
             """Update sector performance analytics."""
             self.sector_performance = sector_data
-            logging.info(f"Sector performance updated: {self.sector_performance}")
+            logger.info(f"Sector performance updated: {self.sector_performance}")
 
     def get_sharpe_ratio(self):
         """Calculate the Sharpe ratio."""
@@ -48,7 +48,7 @@ class Analytics:
         mean_return = np.mean(returns)
         std_dev = np.std(returns)
         sharpe_ratio = mean_return / std_dev if std_dev != 0 else 0
-        logging.info(f"Sharpe Ratio calculated: {round(sharpe_ratio, 2)}")
+        logger.info(f"Sharpe Ratio calculated: {round(sharpe_ratio, 2)}")
         return round(sharpe_ratio, 2)
 
     def get_max_drawdown(self):
@@ -59,7 +59,7 @@ class Analytics:
         peak = np.maximum.accumulate(cumulative_returns)
         drawdown = (cumulative_returns - peak) / peak
         max_drawdown = np.min(drawdown) if len(drawdown) > 0 else 0
-        logging.info(f"Max Drawdown calculated: {round(max_drawdown * 100, 2)}%")
+        logger.info(f"Max Drawdown calculated: {round(max_drawdown * 100, 2)}%")
         return round(max_drawdown * 100, 2)  # As percentage
 
     def get_analytics(self):
@@ -85,7 +85,7 @@ class Analytics:
         """
         self.sentiment_scores = sentiment_data
         self.last_update_time = datetime.now()
-        logging.info(f"Sentiment scores updated: {self.sentiment_scores}")
+        logger.info(f"Sentiment scores updated: {self.sentiment_scores}")
 
     def get_heatmap_data(self):
         """

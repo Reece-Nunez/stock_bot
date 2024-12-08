@@ -1,4 +1,4 @@
-import logging
+from logger_config import logger
 import pandas as pd
 
 class Backtester:
@@ -9,7 +9,7 @@ class Backtester:
 
     def run(self, data):
         """Backtest the strategy on historical data."""
-        logging.info("Starting backtesting...")
+        logger.info("Starting backtesting...")
         data = self.strategy.generate_signal(data)
         balance = self.initial_balance
         position = 0
@@ -19,14 +19,14 @@ class Backtester:
             if row['signal'] == 1:  # Buy
                 position += (balance * (1 - self.transaction_fee)) / row['close']
                 balance = 0
-                logging.info(f"Buy at {row['close']}")
+                logger.info(f"Buy at {row['close']}")
             elif row['signal'] == -1 and position > 0:  # Sell
                 balance += (position * row['close']) * (1 - self.transaction_fee)
                 trade_log.append(balance)
                 position = 0
-                logging.info(f"Sell at {row['close']}")
+                logger.info(f"Sell at {row['close']}")
 
         final_balance = balance + (position * data['close'].iloc[-1])
         cumulative_returns = pd.Series(trade_log).pct_change().dropna().sum()
-        logging.info(f"Final Balance: ${final_balance:.2f}, Cumulative Returns: {cumulative_returns:.2f}")
+        logger.info(f"Final Balance: ${final_balance:.2f}, Cumulative Returns: {cumulative_returns:.2f}")
         return final_balance

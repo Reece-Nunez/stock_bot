@@ -1,10 +1,10 @@
-import logging
+from logger_config import logger
 from alpaca_trade_api import REST
 
-# Configure logging
-logging.basicConfig(
+# Configure logger
+logger.basicConfig(
     filename="order_manager_logs.log",
-    level=logging.INFO,
+    level=logger.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
@@ -23,10 +23,10 @@ class OrderManager:
                 type="market",
                 time_in_force=time_in_force,
             )
-            logging.info(f"Market order placed: {order}")
+            logger.info(f"Market order placed: {order}")
             return order
         except Exception as e:
-            logging.error(f"Failed to place market order: {e}")
+            logger.error(f"Failed to place market order: {e}")
             raise
 
     def place_dynamic_bracket_order(self, symbol, side, risk_per_trade, stop_loss_pct, take_profit_pct):
@@ -38,7 +38,7 @@ class OrderManager:
         risk_amount = current_equity * risk_per_trade
         position_size = min(risk_amount / stop_loss_pct, max_exposure)
         if position_size <= 0:
-            logging.warning(f"Position size for {symbol} is zero or negative. Skipping order.")
+            logger.warning(f"Position size for {symbol} is zero or negative. Skipping order.")
             return
 
         self.place_bracket_order(symbol, position_size, side, take_profit_pct, stop_loss_pct)
@@ -62,8 +62,8 @@ class OrderManager:
                 take_profit={"limit_price": take_profit_price},
                 stop_loss={"stop_price": stop_loss_price},
             )
-            logging.info(f"Bracket order placed: {order}")
+            logger.info(f"Bracket order placed: {order}")
             return order
         except Exception as e:
-            logging.error(f"Failed to place bracket order: {e}")
+            logger.error(f"Failed to place bracket order: {e}")
             raise

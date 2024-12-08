@@ -2,12 +2,12 @@ import os
 from time import sleep
 from alpaca_trade_api import REST
 import pandas as pd
-import logging
+from logger_config import logger
 import requests
 
-logging.basicConfig(
+logger.basicConfig(
     filename="stock_bot_logs.log",
-    level=logging.INFO,
+    level=logger.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
@@ -24,7 +24,7 @@ class DataFetcher:
             data = response.json()
             return data["Rank A: Real-Time Performance"]
         except Exception as e:
-            logging.error(f"Failed to fetch sector performance: {e}")
+            logger.error(f"Failed to fetch sector performance: {e}")
             return {}
 
     def get_historical_data(self, symbol, timeframe, limit=1000, retries=3):
@@ -43,10 +43,10 @@ class DataFetcher:
                 })
                 return df
             except Exception as e:
-                logging.warning(f"Retrying {symbol} historical data fetch... Attempt {attempt + 1}")
+                logger.warning(f"Retrying {symbol} historical data fetch... Attempt {attempt + 1}")
                 attempt += 1
                 sleep(2 ** attempt)  # Exponential backoff
-        logging.error(f"Failed to fetch historical data for {symbol} after {retries} attempts.")
+        logger.error(f"Failed to fetch historical data for {symbol} after {retries} attempts.")
         return pd.DataFrame()
 
     def get_realtime_price(self, symbol):
@@ -55,7 +55,7 @@ class DataFetcher:
             quote = self.api.get_last_trade(symbol)
             return quote.price
         except Exception as e:
-            logging.error(f"Failed to fetch real-time price for {symbol}: {e}")
+            logger.error(f"Failed to fetch real-time price for {symbol}: {e}")
             return None
 
     def get_all_assets(self):
@@ -73,7 +73,7 @@ class DataFetcher:
             ]
             return pd.DataFrame(filtered_assets)
         except Exception as e:
-            logging.error(f"Failed to fetch assets: {e}")
+            logger.error(f"Failed to fetch assets: {e}")
             return pd.DataFrame()
 
     def check_asset_tradable(self, symbol):
@@ -87,7 +87,7 @@ class DataFetcher:
                 "status": asset.status,
             }
         except Exception as e:
-            logging.error(f"Failed to check tradability for {symbol}: {e}")
+            logger.error(f"Failed to check tradability for {symbol}: {e}")
             return None
 
     def get_account_info(self):
@@ -99,7 +99,7 @@ class DataFetcher:
                 "buying_power": float(account.buying_power),
             }
         except Exception as e:
-            logging.error(f"Failed to fetch account info: {e}")
+            logger.error(f"Failed to fetch account info: {e}")
             return {}
 
     def get_portfolio_gain_loss(self):
@@ -113,7 +113,7 @@ class DataFetcher:
                 "balance_change": balance_change,
             }
         except Exception as e:
-            logging.error(f"Failed to fetch portfolio gain/loss: {e}")
+            logger.error(f"Failed to fetch portfolio gain/loss: {e}")
             return {}
         
     def place_trailing_stop_order(self, symbol, qty, side, trail_percent):
@@ -126,9 +126,9 @@ class DataFetcher:
                 trail_percent=trail_percent,
                 time_in_force="gtc",
             )
-            logging.info(f"Trailing stop order placed: {order}")
+            logger.info(f"Trailing stop order placed: {order}")
             return order
         except Exception as e:
-            logging.error(f"Failed to place trailing stop order: {e}")
+            logger.error(f"Failed to place trailing stop order: {e}")
             raise
 

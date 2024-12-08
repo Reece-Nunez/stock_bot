@@ -1,6 +1,6 @@
 import os
 import subprocess
-import logging
+from logger_config import logger
 
 class CloudDeployment:
     def __init__(self, project_name, region="us-east1"):
@@ -69,15 +69,15 @@ class CloudDeployment:
     def check_environment_variables(required_vars):
         for var in required_vars:
             if not os.getenv(var):
-                logging.error(f"Environment variable {var} is not set.")
+                logger.error(f"Environment variable {var} is not set.")
                 raise EnvironmentError(f"Required environment variable {var} is missing.")
 
-# Deployment status logging
+# Deployment status logger
 def log_deployment_status(success, platform):
     if success:
-        logging.info(f"Successfully deployed to {platform}.")
+        logger.info(f"Successfully deployed to {platform}.")
     else:
-        logging.error(f"Failed to deploy to {platform}.")
+        logger.error(f"Failed to deploy to {platform}.")
 
 
 
