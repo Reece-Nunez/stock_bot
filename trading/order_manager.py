@@ -1,13 +1,6 @@
 from logger_config import logger
 from alpaca_trade_api import REST
 
-# Configure logger
-logger.basicConfig(
-    filename="order_manager_logs.log",
-    level=logger.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s"
-)
-
 class OrderManager:
     def __init__(self, api: REST, fetcher):
         self.api = api

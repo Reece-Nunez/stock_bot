@@ -1,0 +1,114 @@
+2024-12-08T17:19:03.805640+0000 ERROR API credentials or BASE_URL are not set.
+2024-12-08T17:22:46.102990+0000 INFO Active strategy: rsi
+2024-12-08T17:22:46.105863+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T17:22:46.106863+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T17:22:46.107087+0000 INFO Trade updated. Profit/Loss: -50, Strategy: rsi, Total Profit: 50
+2024-12-08T17:22:46.107466+0000 INFO Sharpe Ratio calculated: 0.33
+2024-12-08T18:27:25.881441+0000 INFO Active strategy: rsi
+2024-12-08T18:27:25.886859+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T18:27:25.888426+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T18:27:25.888712+0000 INFO Trade updated. Profit/Loss: -50, Strategy: rsi, Total Profit: 50
+2024-12-08T18:27:25.889191+0000 INFO Sharpe Ratio calculated: 0.33
+2024-12-08T18:27:26.317681+0000 WARNING Retrying AAPL historical data fetch... Attempt 1
+2024-12-08T18:27:28.372956+0000 WARNING Retrying AAPL historical data fetch... Attempt 2
+2024-12-08T18:27:32.428163+0000 WARNING Retrying AAPL historical data fetch... Attempt 3
+2024-12-08T18:27:40.428494+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T18:27:40.430222+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T18:28:40.494677+0000 WARNING Retrying AAPL historical data fetch... Attempt 1
+2024-12-08T18:28:42.550324+0000 WARNING Retrying AAPL historical data fetch... Attempt 2
+2024-12-08T18:28:46.606063+0000 WARNING Retrying AAPL historical data fetch... Attempt 3
+2024-12-08T18:28:54.606418+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T18:28:54.607217+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T18:29:54.714948+0000 WARNING Retrying AAPL historical data fetch... Attempt 1
+2024-12-08T18:29:56.770169+0000 WARNING Retrying AAPL historical data fetch... Attempt 2
+2024-12-08T18:30:00.825507+0000 WARNING Retrying AAPL historical data fetch... Attempt 3
+2024-12-08T18:30:08.825874+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T18:30:08.826722+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T18:31:08.937067+0000 WARNING Retrying AAPL historical data fetch... Attempt 1
+2024-12-08T18:31:10.992585+0000 WARNING Retrying AAPL historical data fetch... Attempt 2
+2024-12-08T18:31:15.047904+0000 WARNING Retrying AAPL historical data fetch... Attempt 3
+2024-12-08T18:31:23.048229+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T18:31:23.048957+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T18:32:23.142548+0000 WARNING Retrying AAPL historical data fetch... Attempt 1
+2024-12-08T18:32:25.198031+0000 WARNING Retrying AAPL historical data fetch... Attempt 2
+2024-12-08T18:32:29.256916+0000 WARNING Retrying AAPL historical data fetch... Attempt 3
+2024-12-08T18:32:37.257446+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T18:32:37.258333+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T18:36:20.740102+0000 INFO Active strategy: rsi
+2024-12-08T18:36:20.743460+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T18:36:20.744467+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T18:36:20.744639+0000 INFO Trade updated. Profit/Loss: -50, Strategy: rsi, Total Profit: 50
+2024-12-08T18:36:20.745014+0000 INFO Sharpe Ratio calculated: 0.33
+2024-12-08T18:36:20.752247+0000 ERROR Error in trade execution loop for AAPL: 'coroutine' object has no attribute 'empty'
+2024-12-08T18:36:22.869917+0000 INFO Market order placed: <MagicMock name='mock.submit_order()' id='125924350502640'>
+2024-12-08T18:36:22.872645+0000 INFO Bracket order placed: <MagicMock name='mock.submit_order()' id='125924350937856'>
+2024-12-08T18:45:38.385199+0000 INFO Active strategy: rsi
+2024-12-08T18:45:38.389119+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T18:45:38.390160+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T18:45:38.390332+0000 INFO Trade updated. Profit/Loss: -50, Strategy: rsi, Total Profit: 50
+2024-12-08T18:45:38.390695+0000 INFO Sharpe Ratio calculated: 0.33
+2024-12-08T18:45:40.549417+0000 INFO Market order placed: <MagicMock name='mock.submit_order()' id='132457319759216'>
+2024-12-08T18:45:40.551645+0000 INFO Bracket order placed: <MagicMock name='mock.submit_order()' id='132457309517968'>
+2024-12-08T18:48:00.358423+0000 INFO Active strategy: rsi
+2024-12-08T18:48:00.363630+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T18:48:00.364983+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T18:48:00.365223+0000 INFO Trade updated. Profit/Loss: -50, Strategy: rsi, Total Profit: 50
+2024-12-08T18:48:00.365850+0000 INFO Sharpe Ratio calculated: 0.33
+2024-12-08T18:48:02.556532+0000 WARNING Retrying AAPL historical data fetch... Attempt 1
+2024-12-08T18:48:04.612693+0000 WARNING Retrying AAPL historical data fetch... Attempt 2
+2024-12-08T18:48:08.668244+0000 WARNING Retrying AAPL historical data fetch... Attempt 3
+2024-12-08T18:48:16.669087+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T18:48:16.670310+0000 ERROR Error in trade execution loop for AAPL: object DataFrame can't be used in 'await' expression
+2024-12-08T18:48:17.726472+0000 WARNING Retrying AAPL historical data fetch... Attempt 1
+2024-12-08T18:48:19.784428+0000 WARNING Retrying AAPL historical data fetch... Attempt 2
+2024-12-08T18:48:23.839403+0000 WARNING Retrying AAPL historical data fetch... Attempt 3
+2024-12-08T18:48:31.839702+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T18:48:31.840426+0000 ERROR Error in trade execution loop for AAPL: object DataFrame can't be used in 'await' expression
+2024-12-08T18:48:32.896732+0000 WARNING Retrying AAPL historical data fetch... Attempt 1
+2024-12-08T18:48:34.951857+0000 WARNING Retrying AAPL historical data fetch... Attempt 2
+2024-12-08T18:48:39.006975+0000 WARNING Retrying AAPL historical data fetch... Attempt 3
+2024-12-08T18:48:47.007346+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T18:48:47.008185+0000 ERROR Error in trade execution loop for AAPL: object DataFrame can't be used in 'await' expression
+2024-12-08T18:48:48.064302+0000 WARNING Retrying AAPL historical data fetch... Attempt 1
+2024-12-08T18:48:50.119363+0000 WARNING Retrying AAPL historical data fetch... Attempt 2
+2024-12-08T18:48:59.293930+0000 INFO Active strategy: rsi
+2024-12-08T18:48:59.299246+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T18:48:59.300682+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T18:48:59.300952+0000 INFO Trade updated. Profit/Loss: -50, Strategy: rsi, Total Profit: 50
+2024-12-08T18:48:59.301448+0000 INFO Sharpe Ratio calculated: 0.33
+2024-12-08T18:49:01.490708+0000 WARNING Retrying AAPL historical data fetch... Attempt 1
+2024-12-08T18:49:03.546660+0000 WARNING Retrying AAPL historical data fetch... Attempt 2
+2024-12-08T18:49:07.601938+0000 WARNING Retrying AAPL historical data fetch... Attempt 3
+2024-12-08T18:49:15.602387+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T18:49:15.603733+0000 ERROR Error in trade execution loop for AAPL: object DataFrame can't be used in 'await' expression
+2024-12-08T18:49:16.659937+0000 WARNING Retrying AAPL historical data fetch... Attempt 1
+2024-12-08T18:49:18.715317+0000 WARNING Retrying AAPL historical data fetch... Attempt 2
+2024-12-08T18:49:22.771349+0000 WARNING Retrying AAPL historical data fetch... Attempt 3
+2024-12-08T18:49:30.771688+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T18:49:30.772503+0000 ERROR Error in trade execution loop for AAPL: object DataFrame can't be used in 'await' expression
+2024-12-08T18:49:31.828789+0000 WARNING Retrying AAPL historical data fetch... Attempt 1
+2024-12-08T18:49:33.884011+0000 WARNING Retrying AAPL historical data fetch... Attempt 2
+2024-12-08T18:49:37.939957+0000 WARNING Retrying AAPL historical data fetch... Attempt 3
+2024-12-08T18:49:45.940462+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T18:49:45.941227+0000 ERROR Error in trade execution loop for AAPL: object DataFrame can't be used in 'await' expression
+2024-12-08T18:49:46.997822+0000 WARNING Retrying AAPL historical data fetch... Attempt 1
+2024-12-08T18:49:49.052814+0000 WARNING Retrying AAPL historical data fetch... Attempt 2
+2024-12-08T18:49:53.108163+0000 WARNING Retrying AAPL historical data fetch... Attempt 3
+2024-12-08T18:50:01.108794+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T18:50:01.109542+0000 ERROR Error in trade execution loop for AAPL: object DataFrame can't be used in 'await' expression
+2024-12-08T18:50:02.166519+0000 WARNING Retrying AAPL historical data fetch... Attempt 1
+2024-12-08T18:50:04.224921+0000 WARNING Retrying AAPL historical data fetch... Attempt 2
+2024-12-08T18:50:08.280177+0000 WARNING Retrying AAPL historical data fetch... Attempt 3
+2024-12-08T18:59:06.905654+0000 INFO Active strategy: rsi
+2024-12-08T18:59:06.908965+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T18:59:06.910046+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T18:59:06.910221+0000 INFO Trade updated. Profit/Loss: -50, Strategy: rsi, Total Profit: 50
+2024-12-08T18:59:06.910579+0000 INFO Sharpe Ratio calculated: 0.33
+2024-12-08T19:00:25.592423+0000 INFO Active strategy: rsi
+2024-12-08T19:00:25.595662+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T19:00:25.596748+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T19:00:25.596921+0000 INFO Trade updated. Profit/Loss: -50, Strategy: rsi, Total Profit: 50
+2024-12-08T19:00:25.597286+0000 INFO Sharpe Ratio calculated: 0.33
+2024-12-08T19:00:25.606660+0000 INFO Market order placed: <MagicMock name='mock.submit_order()' id='123275746024032'>
+2024-12-08T19:00:25.609031+0000 INFO Bracket order placed: <MagicMock name='mock.submit_order()' id='123275746075680'>
+2024-12-08T19:14:59.649943+0000 ERROR Failed to fetch account info: 404 Client Error: Not Found for url: https://paper-api.alpaca.markets/v2/v2/account

@@ -1,8 +1,8 @@
 import os
 from logger_config import logger
 import asyncio
+from dotenv import load_dotenv
 from alerts.alerts import send_alert
-from loguru import logger
 from data.data_fetcher import DataFetcher
 from strategies.rsi_strategy import RSIStrategy
 from strategies.macd_strategy import MACDStrategy
@@ -11,20 +11,13 @@ from trading.order_manager import OrderManager
 from analytics.analytics import Analytics
 from backtest.backtester import Backtester
 
-# Configure Loguru
-logger.add("stock_bot_logs.log", rotation="10 MB")
-
-# Configure logger
-logger.basicConfig(
-    filename="stock_bot_logs.log",
-    level=logger.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s"
-)
+# Load environment variables
+load_dotenv()
 
 # Config
-API_KEY = os.getenv("ALPACA_API_KEY")
-API_SECRET = os.getenv("ALPACA_API_SECRET")
-BASE_URL = os.getenv("ALPACA_BASE_URL")
+API_KEY = os.getenv("APCA_API_KEY_ID")
+API_SECRET = os.getenv("APCA_API_SECRET_KEY")
+BASE_URL = os.getenv("APCA_API_BASE_URL")
 
 if not API_KEY or not API_SECRET or not BASE_URL:
     logger.error("API credentials or BASE_URL are not set.")
@@ -54,15 +47,16 @@ stop_loss_pct = 0.02
 take_profit_pct = 0.05
 symbol = "AAPL"
 
-async def execute_trades(current_strategy: str = default_strategy):
+async def execute_trades(current_strategy: str = "rsi"):
     """
     Execute trades based on the current active strategy in real-time.
     """
     last_signal = None
+
     while True:
         try:
             # Fetch historical data
-            data = fetcher.get_historical_data(symbol, "minute", limit=100)
+            data = await fetcher.get_historical_data(symbol, "minute", limit=100)
             if data.empty:
                 logger.warning(f"No data available for {symbol}. Retrying in 60 seconds.")
                 await asyncio.sleep(60)
@@ -70,59 +64,34 @@ async def execute_trades(current_strategy: str = default_strategy):
 
             # Generate signal
             strategy = strategies[current_strategy]
-            signal = strategy.generate_signal(data)["signal"].iloc[-1]
+            signal = data["signal"].iloc[-1]
 
             # Execute trades based on signal
             if signal != last_signal:
                 if signal == 1:  # Buy
-                    order_manager.place_dynamic_bracket_order(
-                        symbol,
+                    await order_manager.place_dynamic_bracket_order(
+                        symbol=symbol,
                         side="buy",
                         risk_per_trade=risk_per_trade,
                         stop_loss_pct=stop_loss_pct,
                         take_profit_pct=take_profit_pct,
                     )
-                    analytics.update_trade(100, current_strategy) # Simulate profit/loss
-                    logger.info(f"Buy signal triggered for {symbol}.")
                 elif signal == -1:  # Sell
-                    order_manager.place_dynamic_bracket_order(
-                        symbol,
+                    await order_manager.place_dynamic_bracket_order(
+                        symbol=symbol,
                         side="sell",
                         risk_per_trade=risk_per_trade,
                         stop_loss_pct=stop_loss_pct,
                         take_profit_pct=take_profit_pct,
                     )
-                    analytics.update_trade(-50, current_strategy) # Simulate profit/loss
-                    logger.info(f"Sell signal triggered for {symbol}.")
                 last_signal = signal
-                
-                # Dynamic strategy switching based on sentiment or analytics
-                if analytics.sentiment_scores.get("market_sentiment", 0) < -0.5:
-                    default_strategy = "bollinger"
-                    logger.info(f"Switched strategy to Bollinger due to negative market sentiment.")
-    
 
         except Exception as e:
             logger.error(f"Error in trade execution loop for {symbol}: {e}")
 
-        await asyncio.sleep(60)  # Run the loop every 60 seconds
-        
-def backtest_strategy(strategy_name, historical_data):
-    """Backtest a given strategy on historical data."""
-    strategy = strategies[strategy_name]
-    backtester = Backtester(strategy)
-    results = backtester.run(historical_data)
-    analytics.update_trade(results - fetcher.get_portfolio_gain_loss()["current_equity"], strategy_name)
-    logger.info(f"Backtest results for {strategy_name}: {results}")
-    return results
+        await asyncio.sleep(60)  # Wait a minute before fetching new data
 
 if __name__ == "__main__":
-    # Backtest before live trading
-    historical_data = fetcher.get_historical_data(symbol, "minute", limit=1000)
-    for strat in strategies:
-        backtest_strategy(strat, historical_data)
-        
-     # Switch to live trading after backtesting
     try:
         asyncio.run(execute_trades())
     except KeyboardInterrupt:

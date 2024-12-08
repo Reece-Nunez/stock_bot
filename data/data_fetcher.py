@@ -5,12 +5,6 @@ import pandas as pd
 from logger_config import logger
 import requests
 
-logger.basicConfig(
-    filename="stock_bot_logs.log",
-    level=logger.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s"
-)
-
 class DataFetcher:
     def __init__(self, api_key, api_secret, base_url):
         self.api = REST(api_key, api_secret, base_url)
