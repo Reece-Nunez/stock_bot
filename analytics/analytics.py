@@ -1,5 +1,7 @@
 import logging
 import numpy as np
+import pandas as pd
+from datetime import datetime
 
 class Analytics:
     def __init__(self):
@@ -7,15 +9,31 @@ class Analytics:
         self.win_rate = 0
         self.total_profit = 0
         self.trade_history = []
-        self.current_strategy = "rsi"
+        self.strategy_performance = {}
+        self.sentiment_scores = {}  # For external sentiment analysis
+        self.last_update_time = datetime.now()
 
-    def update_trade(self, profit_loss):
+    def update_trade(self, profit_loss, strategy):
+        """
+        Update analytics when a trade is executed.
+        """
         self.total_trades += 1
-        self.trade_history.append(profit_loss)
-        wins = len([trade for trade in self.trade_history if trade > 0])
+        self.trade_history.append({
+            "timestamp": datetime.now(),
+            "profit_loss": profit_loss,
+            "strategy": strategy
+        })
+        wins = len([trade for trade in self.trade_history if trade["profit_loss"] > 0])
         self.win_rate = (wins / self.total_trades) * 100
         self.total_profit += profit_loss
-        logging.info(f"Trade updated. Profit/Loss: {profit_loss}, Total Profit: {self.total_profit}")
+
+        # Update performance by strategy
+        if strategy not in self.strategy_performance:
+            self.strategy_performance[strategy] = {"trades": 0, "profit": 0}
+        self.strategy_performance[strategy]["trades"] += 1
+        self.strategy_performance[strategy]["profit"] += profit_loss
+
+        logging.info(f"Trade updated. Profit/Loss: {profit_loss}, Strategy: {strategy}, Total Profit: {self.total_profit}")
 
     def get_sharpe_ratio(self):
         """Calculate the Sharpe ratio."""
@@ -38,15 +56,42 @@ class Analytics:
         return round(max_drawdown * 100, 2)  # As percentage
 
     def get_analytics(self):
+        """
+        Return analytics as a dictionary.
+        """
         return {
             "total_trades": self.total_trades,
             "win_rate": round(self.win_rate, 2),
             "total_profit": round(self.total_profit, 2),
-            "sharpe_ratio": self.get_sharpe_ratio(),
-            "max_drawdown": self.get_max_drawdown(),
-            "current_strategy": self.current_strategy,
+            "strategy_performance": self.strategy_performance,
+            "sentiment_scores": self.sentiment_scores,
+            "last_update_time": self.last_update_time.strftime("%Y-%m-%d %H:%M:%S"),
         }
 
     def get_real_time_updates(self):
         """Simulated real-time updates."""
         return {"recent_trades": self.trade_history[-5:]}  # Return last 5 trades
+    
+    def update_sentiment_scores(self, sentiment_data):
+        """
+        Update sentiment scores from external APIs.
+        """
+        self.sentiment_scores = sentiment_data
+        self.last_update_time = datetime.now()
+        logging.info(f"Sentiment scores updated: {self.sentiment_scores}")
+
+    def get_heatmap_data(self):
+        """
+        Generate heatmap data for strategy performance.
+        """
+        strategies = self.strategy_performance.keys()
+        trades = [self.strategy_performance[strategy]["trades"] for strategy in strategies]
+        profits = [self.strategy_performance[strategy]["profit"] for strategy in strategies]
+
+        # Generate heatmap-friendly DataFrame
+        heatmap_data = pd.DataFrame({
+            "Strategy": strategies,
+            "Trades": trades,
+            "Profit": profits
+        })
+        return heatmap_data
