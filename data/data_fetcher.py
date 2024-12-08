@@ -1,3 +1,4 @@
+from time import sleep
 from alpaca_trade_api import REST
 import pandas as pd
 import logging
@@ -100,3 +101,20 @@ class DataFetcher:
         except Exception as e:
             logging.error(f"Failed to fetch portfolio gain/loss: {e}")
             return {}
+        
+    def place_trailing_stop_order(self, symbol, qty, side, trail_percent):
+        try:
+            order = self.api.submit_order(
+                symbol=symbol,
+                qty=qty,
+                side=side,
+                type="trailing_stop",
+                trail_percent=trail_percent,
+                time_in_force="gtc",
+            )
+            logging.info(f"Trailing stop order placed: {order}")
+            return order
+        except Exception as e:
+            logging.error(f"Failed to place trailing stop order: {e}")
+            raise
+

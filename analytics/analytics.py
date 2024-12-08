@@ -39,20 +39,22 @@ class Analytics:
         """Calculate the Sharpe ratio."""
         if len(self.trade_history) < 2:
             return 0
-        returns = np.array(self.trade_history)
+        returns = np.array([trade["profit_loss"] for trade in self.trade_history])
         mean_return = np.mean(returns)
         std_dev = np.std(returns)
         sharpe_ratio = mean_return / std_dev if std_dev != 0 else 0
+        logging.info(f"Sharpe Ratio calculated: {round(sharpe_ratio, 2)}")
         return round(sharpe_ratio, 2)
 
     def get_max_drawdown(self):
         """Calculate maximum drawdown."""
         if not self.trade_history:
             return 0
-        cumulative_returns = np.cumsum(self.trade_history)
+        cumulative_returns = np.cumsum([trade["profit_loss"] for trade in self.trade_history])
         peak = np.maximum.accumulate(cumulative_returns)
         drawdown = (cumulative_returns - peak) / peak
-        max_drawdown = np.min(drawdown)
+        max_drawdown = np.min(drawdown) if len(drawdown) > 0 else 0
+        logging.info(f"Max Drawdown calculated: {round(max_drawdown * 100, 2)}%")
         return round(max_drawdown * 100, 2)  # As percentage
 
     def get_analytics(self):
@@ -71,7 +73,7 @@ class Analytics:
     def get_real_time_updates(self):
         """Simulated real-time updates."""
         return {"recent_trades": self.trade_history[-5:]}  # Return last 5 trades
-    
+
     def update_sentiment_scores(self, sentiment_data):
         """
         Update sentiment scores from external APIs.

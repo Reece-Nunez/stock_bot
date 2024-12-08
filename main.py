@@ -6,6 +6,7 @@ from strategies.rsi_strategy import RSIStrategy
 from strategies.macd_strategy import MACDStrategy
 from strategies.bollinger_strategy import BollingerBandsStrategy
 from trading.order_manager import OrderManager
+from analytics.analytics import Analytics
 
 # Configure Logging
 logging.basicConfig(
@@ -23,6 +24,9 @@ if not API_KEY or not API_SECRET or not BASE_URL:
     logging.error("API credentials or BASE_URL are not set.")
     raise EnvironmentError("API credentials or BASE_URL are not set.")
 
+# Initialize Analytics
+analytics = Analytics()
+
 # Initialize modules
 fetcher = DataFetcher(API_KEY, API_SECRET, BASE_URL)
 order_manager = OrderManager(fetcher.api)
@@ -34,6 +38,9 @@ strategies = {
     "bollinger": BollingerBandsStrategy(window=20, num_std_dev=2),
 }
 default_strategy = "rsi"  # Default active strategy
+
+# Log active strategy at the start of the loop
+logging.info(f"Active strategy: {default_strategy}")
 
 # Parameters
 risk_per_trade = 0.02
@@ -69,6 +76,7 @@ async def execute_trades(current_strategy: str = default_strategy):
                         stop_loss_pct=stop_loss_pct,
                         take_profit_pct=take_profit_pct,
                     )
+                    analytics.update_trade(100, current_strategy) # Simulate profit/loss
                     logging.info(f"Buy signal triggered for {symbol}.")
                 elif signal == -1:  # Sell
                     order_manager.place_dynamic_bracket_order(
@@ -78,8 +86,15 @@ async def execute_trades(current_strategy: str = default_strategy):
                         stop_loss_pct=stop_loss_pct,
                         take_profit_pct=take_profit_pct,
                     )
+                    analytics.update_trade(-50, current_strategy) # Simulate profit/loss
                     logging.info(f"Sell signal triggered for {symbol}.")
                 last_signal = signal
+                
+                # Dynamic strategy switching based on sentiment or analytics
+                if analytics.sentiment_scores.get("market_sentiment", 0) < -0.5:
+                    default_strategy = "bollinger"
+                    logging.info(f"Switched strategy to Bollinger due to negative market sentiment.")
+    
 
         except Exception as e:
             logging.error(f"Error in trade execution loop for {symbol}: {e}")

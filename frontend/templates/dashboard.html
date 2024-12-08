@@ -97,16 +97,31 @@
     </form>
     </div>
     <script src="/static/heatmap.js"></script>
+    <div id="heatmap-container">
+        <div id="heatmap-placeholder">
+            <p>Loading heatmap data...</p>
+        </div>
+        <div id="heatmap" style="display: none;">
+            <!-- Heatmap visualization will be dynamically added -->
+        </div>
+    </div>
     <script>
-        // Load heatmap data dynamically
         fetch('/api/analytics')
             .then(response => response.json())
             .then(data => {
-                // Process and render heatmap
+                // Hide placeholder
+                document.getElementById("heatmap-placeholder").style.display = "none";
+                document.getElementById("heatmap").style.display = "block";
+    
+                // Render heatmap with tooltips
                 const heatmapData = data.strategy_performance;
-                renderHeatmap(heatmapData); // `renderHeatmap` is defined in heatmap.js
+                renderHeatmap(heatmapData);
+            })
+            .catch(() => {
+                document.getElementById("heatmap-placeholder").innerHTML = "<p>Failed to load heatmap data.</p>";
             });
     </script>
+    
 </body>
 
 </html>
