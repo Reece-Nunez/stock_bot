@@ -4,8 +4,8 @@ from trading.order_manager import OrderManager
 from backtest.backtester import Backtester
 
 # Config
-API_KEY = CK59BIB075IWXZMCOH11
-API_SECRET = cNzVJJogHJkr0oMtsEnBIjxZuCjQSck4rATj7eLW
+API_KEY = 'CK59BIB075IWXZMCOH11'
+API_SECRET = 'cNzVJJogHJkr0oMtsEnBIjxZuCjQSck4rATj7eLW'
 BASE_URL = 'https://paper-api.alpaca.markets'
 
 # Initialize modules
