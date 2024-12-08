@@ -112,3 +112,89 @@
 2024-12-08T19:00:25.606660+0000 INFO Market order placed: <MagicMock name='mock.submit_order()' id='123275746024032'>
 2024-12-08T19:00:25.609031+0000 INFO Bracket order placed: <MagicMock name='mock.submit_order()' id='123275746075680'>
 2024-12-08T19:14:59.649943+0000 ERROR Failed to fetch account info: 404 Client Error: Not Found for url: https://paper-api.alpaca.markets/v2/v2/account
+2024-12-08T19:38:17.345334+0000 INFO Active strategy: rsi
+2024-12-08T19:38:17.532272+0000 WARNING Retrying AAPL historical data fetch... Attempt 1
+2024-12-08T19:38:19.592009+0000 WARNING Retrying AAPL historical data fetch... Attempt 2
+2024-12-08T19:38:23.649577+0000 WARNING Retrying AAPL historical data fetch... Attempt 3
+2024-12-08T19:38:31.650015+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T19:38:31.651385+0000 ERROR Error in trade execution loop for AAPL: object DataFrame can't be used in 'await' expression
+2024-12-08T19:39:18.170605+0000 INFO Trading bot stopped manually.
+2024-12-08T19:39:18.229888+0000 WARNING Retrying AAPL historical data fetch... Attempt 1
+2024-12-08T19:39:20.287163+0000 WARNING Retrying AAPL historical data fetch... Attempt 2
+2024-12-08T19:40:24.732247+0000 INFO Active strategy: rsi
+2024-12-08T19:40:24.905017+0000 WARNING Retrying AAPL historical data fetch... Attempt 1
+2024-12-08T19:40:26.963510+0000 WARNING Retrying AAPL historical data fetch... Attempt 2
+2024-12-08T19:40:31.020172+0000 WARNING Retrying AAPL historical data fetch... Attempt 3
+2024-12-08T19:40:39.020706+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T19:40:39.022062+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T19:41:19.809757+0000 INFO Trading bot stopped manually.
+2024-12-08T19:41:19.867129+0000 WARNING Retrying AAPL historical data fetch... Attempt 1
+2024-12-08T19:48:50.520262+0000 DEBUG Attempting to fetch historical data for AAPL with timeframe minute, limit 100. Attempt 1
+2024-12-08T19:48:50.983869+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: invalid timeframe: minute
+2024-12-08T19:48:52.984423+0000 DEBUG Attempting to fetch historical data for AAPL with timeframe minute, limit 100. Attempt 2
+2024-12-08T19:48:53.042344+0000 WARNING Retrying AAPL historical data fetch... Attempt 2. Error: invalid timeframe: minute
+2024-12-08T19:48:57.042752+0000 DEBUG Attempting to fetch historical data for AAPL with timeframe minute, limit 100. Attempt 3
+2024-12-08T19:48:57.099463+0000 WARNING Retrying AAPL historical data fetch... Attempt 3. Error: invalid timeframe: minute
+2024-12-08T19:49:05.099974+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T19:50:15.144299+0000 INFO Active strategy: rsi
+2024-12-08T19:50:15.145067+0000 DEBUG Attempting to fetch historical data for AAPL with timeframe minute, limit 100. Attempt 1
+2024-12-08T19:50:15.331442+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: invalid timeframe: minute
+2024-12-08T19:50:17.331968+0000 DEBUG Attempting to fetch historical data for AAPL with timeframe minute, limit 100. Attempt 2
+2024-12-08T19:50:17.389786+0000 WARNING Retrying AAPL historical data fetch... Attempt 2. Error: invalid timeframe: minute
+2024-12-08T19:50:21.390187+0000 DEBUG Attempting to fetch historical data for AAPL with timeframe minute, limit 100. Attempt 3
+2024-12-08T19:50:21.446157+0000 WARNING Retrying AAPL historical data fetch... Attempt 3. Error: invalid timeframe: minute
+2024-12-08T19:50:29.446514+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T19:50:29.447905+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T19:50:51.421782+0000 INFO Trading bot stopped manually.
+2024-12-08T19:50:51.422062+0000 DEBUG Attempting to fetch historical data for AAPL with timeframe minute, limit 1000. Attempt 1
+2024-12-08T19:50:51.477696+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: invalid timeframe: minute
+2024-12-08T19:51:44.227723+0000 INFO Active strategy: rsi
+2024-12-08T19:51:44.228518+0000 DEBUG Attempting to fetch historical data for AAPL with timeframe minute, limit 100. Attempt 1
+2024-12-08T19:51:44.401224+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: invalid timeframe: minute
+2024-12-08T19:51:46.401763+0000 DEBUG Attempting to fetch historical data for AAPL with timeframe minute, limit 100. Attempt 2
+2024-12-08T19:51:46.458929+0000 WARNING Retrying AAPL historical data fetch... Attempt 2. Error: invalid timeframe: minute
+2024-12-08T19:51:50.459420+0000 DEBUG Attempting to fetch historical data for AAPL with timeframe minute, limit 100. Attempt 3
+2024-12-08T19:51:50.516249+0000 WARNING Retrying AAPL historical data fetch... Attempt 3. Error: invalid timeframe: minute
+2024-12-08T19:51:58.516741+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T19:51:58.518021+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T19:52:58.569485+0000 DEBUG Attempting to fetch historical data for AAPL with timeframe minute, limit 100. Attempt 1
+2024-12-08T19:52:58.629369+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: invalid timeframe: minute
+2024-12-08T19:53:00.629963+0000 DEBUG Attempting to fetch historical data for AAPL with timeframe minute, limit 100. Attempt 2
+2024-12-08T19:53:00.687745+0000 WARNING Retrying AAPL historical data fetch... Attempt 2. Error: invalid timeframe: minute
+2024-12-08T19:53:04.688230+0000 DEBUG Attempting to fetch historical data for AAPL with timeframe minute, limit 100. Attempt 3
+2024-12-08T19:53:04.746999+0000 WARNING Retrying AAPL historical data fetch... Attempt 3. Error: invalid timeframe: minute
+2024-12-08T19:53:04.889603+0000 INFO Trading bot stopped manually.
+2024-12-08T19:53:04.889987+0000 DEBUG Attempting to fetch historical data for AAPL with timeframe minute, limit 1000. Attempt 1
+2024-12-08T19:53:04.945634+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: invalid timeframe: minute
+2024-12-08T19:53:56.638282+0000 INFO Active strategy: rsi
+2024-12-08T19:53:56.639035+0000 DEBUG Attempting to fetch historical data for AAPL with timeframe minute, limit 100. Attempt 1
+2024-12-08T19:53:56.819161+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: invalid timeframe: minute
+2024-12-08T19:53:58.819608+0000 DEBUG Attempting to fetch historical data for AAPL with timeframe minute, limit 100. Attempt 2
+2024-12-08T19:53:58.876638+0000 WARNING Retrying AAPL historical data fetch... Attempt 2. Error: invalid timeframe: minute
+2024-12-08T19:54:02.876975+0000 DEBUG Attempting to fetch historical data for AAPL with timeframe minute, limit 100. Attempt 3
+2024-12-08T19:54:02.936434+0000 WARNING Retrying AAPL historical data fetch... Attempt 3. Error: invalid timeframe: minute
+2024-12-08T19:54:10.936811+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T19:54:10.938136+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T19:55:10.983377+0000 DEBUG Attempting to fetch historical data for AAPL with timeframe minute, limit 100. Attempt 1
+2024-12-08T19:55:11.043586+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: invalid timeframe: minute
+2024-12-08T19:55:13.043994+0000 DEBUG Attempting to fetch historical data for AAPL with timeframe minute, limit 100. Attempt 2
+2024-12-08T19:55:13.101088+0000 WARNING Retrying AAPL historical data fetch... Attempt 2. Error: invalid timeframe: minute
+2024-12-08T19:55:17.101507+0000 DEBUG Attempting to fetch historical data for AAPL with timeframe minute, limit 100. Attempt 3
+2024-12-08T19:55:17.158749+0000 WARNING Retrying AAPL historical data fetch... Attempt 3. Error: invalid timeframe: minute
+2024-12-08T19:55:25.159222+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T19:55:25.160081+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T19:55:26.811801+0000 INFO Trading bot stopped manually.
+2024-12-08T19:55:26.812060+0000 DEBUG Attempting to fetch historical data for AAPL with timeframe minute, limit 1000. Attempt 1
+2024-12-08T19:55:26.869190+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: invalid timeframe: minute
+2024-12-08T19:55:31.162947+0000 INFO Active strategy: rsi
+2024-12-08T19:55:31.163695+0000 DEBUG Attempting to fetch historical data for AAPL with timeframe 1Min, limit 100. Attempt 1
+2024-12-08T19:55:31.349287+0000 DEBUG Raw response for AAPL: []
+2024-12-08T19:55:31.349574+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T19:55:31.349877+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: Empty data response
+2024-12-08T19:55:33.350211+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T19:55:33.351618+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T19:55:41.127487+0000 INFO Trading bot stopped manually.
+2024-12-08T19:55:41.128461+0000 DEBUG Attempting to fetch historical data for AAPL with timeframe 1Min, limit 1000. Attempt 1
+2024-12-08T19:55:41.187624+0000 DEBUG Raw response for AAPL: []
+2024-12-08T19:55:41.187816+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T19:55:41.188034+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: Empty data response

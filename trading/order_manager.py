@@ -9,9 +9,12 @@ class OrderManager:
     def place_market_order(self, symbol: str, qty: int, side: str, time_in_force="day"):
         """Place a market order."""
         try:
+            if qty <= 0:
+                logger.warning(f"Invalid quantity {qty} for {symbol}. Skipping order.")
+                return
             order = self.api.submit_order(
                 symbol=symbol,
-                qty=qty,
+                qty=round(qty),
                 side=side,
                 type="market",
                 time_in_force=time_in_force,
@@ -21,7 +24,7 @@ class OrderManager:
         except Exception as e:
             logger.error(f"Failed to place market order: {e}")
             raise
-
+        
     def place_dynamic_bracket_order(self, symbol, side, risk_per_trade, stop_loss_pct, take_profit_pct):
         """Place a dynamic bracket order with a portfolio exposure cap."""
         current_equity = self.fetcher.get_portfolio_gain_loss()["current_equity"]  # Use fetcher instance

@@ -47,16 +47,18 @@ stop_loss_pct = 0.02
 take_profit_pct = 0.05
 symbol = "AAPL"
 
-async def execute_trades(current_strategy: str = "rsi"):
+async def execute_trades(current_strategy: str = "rsi", max_iterations: int = None):
     """
     Execute trades based on the current active strategy in real-time.
     """
     last_signal = None
+    iteration = 0
 
-    while True:
+    while max_iterations is None or iteration < max_iterations:
+        iteration += 1
         try:
             # Fetch historical data
-            data = await fetcher.get_historical_data(symbol, "minute", limit=100)
+            data = fetcher.get_historical_data(symbol, "minute", limit=100)
             if data.empty:
                 logger.warning(f"No data available for {symbol}. Retrying in 60 seconds.")
                 await asyncio.sleep(60)
@@ -64,6 +66,7 @@ async def execute_trades(current_strategy: str = "rsi"):
 
             # Generate signal
             strategy = strategies[current_strategy]
+            data = strategy.generate_signal(data)
             signal = data["signal"].iloc[-1]
 
             # Execute trades based on signal
@@ -99,3 +102,10 @@ if __name__ == "__main__":
     except Exception as e:
         logger.critical(f"Critical error: {e}")
         send_alert("Critical Error in Trading Bot", str(e))
+        
+    # Run backtesting
+    historical_data = asyncio.run(fetcher.get_historical_data(symbol, "minute", limit=1000))
+    for strat in strategies:
+        results = Backtester(strategies[strat]).run(historical_data)
+        logger.info(f"Backtesting results for {strat}: {results}")
+

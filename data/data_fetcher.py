@@ -23,10 +23,36 @@ class DataFetcher:
 
     def get_historical_data(self, symbol, timeframe, limit=1000, retries=3):
         """Fetch historical data for the given symbol with retry logic."""
+        # Define valid timeframes for Alpaca API
+        valid_timeframes = {
+            "minute": "1Min",
+            "5minute": "5Min",
+            "15minute": "15Min",
+            "hour": "1Hour",
+            "day": "1Day"
+        }
+
+        # Translate the timeframe to Alpaca-compatible format
+        alpaca_timeframe = valid_timeframes.get(timeframe.lower())
+        if not alpaca_timeframe:
+            logger.error(f"Invalid timeframe '{timeframe}' provided. Valid options are: {list(valid_timeframes.keys())}")
+            return pd.DataFrame()
+        
         attempt = 0
         while attempt < retries:
             try:
-                bars = self.api.get_bars(symbol, timeframe, limit=limit)
+                logger.debug(f"Attempting to fetch historical data for {symbol} with timeframe {alpaca_timeframe}, limit {limit}. Attempt {attempt + 1}")
+                
+                # Use Alpaca-compatible timeframe
+                bars = self.api.get_bars(symbol, alpaca_timeframe, limit=limit)
+                
+                logger.debug(f"Raw response for {symbol}: {bars}")
+                
+                if not bars:
+                    logger.warning(f"No data returned for {symbol}. Retrying...")
+                    raise ValueError("Empty data response")
+                
+                # Convert response to DataFrame
                 df = pd.DataFrame({
                     'time': [bar.t for bar in bars],
                     'open': [bar.o for bar in bars],
@@ -35,13 +61,17 @@ class DataFetcher:
                     'close': [bar.c for bar in bars],
                     'volume': [bar.v for bar in bars]
                 })
+                logger.info(f"Successfully fetched historical data for {symbol}")
                 return df
+            
             except Exception as e:
-                logger.warning(f"Retrying {symbol} historical data fetch... Attempt {attempt + 1}")
+                logger.warning(f"Retrying {symbol} historical data fetch... Attempt {attempt + 1}. Error: {e}")
                 attempt += 1
                 sleep(2 ** attempt)  # Exponential backoff
-        logger.error(f"Failed to fetch historical data for {symbol} after {retries} attempts.")
-        return pd.DataFrame()
+        
+            logger.error(f"Failed to fetch historical data for {symbol} after {retries} attempts.")
+            return pd.DataFrame()
+
 
     def get_realtime_price(self, symbol):
         """Fetch real-time price for a symbol."""
