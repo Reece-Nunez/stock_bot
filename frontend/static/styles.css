@@ -53,3 +53,10 @@ table th {
     background-color: #f4f4f9;
     color: #555;
 }
+
+.form-container {
+    margin-top: 20px;
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+}
