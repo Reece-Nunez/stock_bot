@@ -1,12 +1,18 @@
 import os
 import logging
 import asyncio
+from alerts.alerts import send_alert
+from loguru import logger
 from data.data_fetcher import DataFetcher
 from strategies.rsi_strategy import RSIStrategy
 from strategies.macd_strategy import MACDStrategy
 from strategies.bollinger_strategy import BollingerBandsStrategy
 from trading.order_manager import OrderManager
 from analytics.analytics import Analytics
+from backtest.backtester import Backtester
+
+# Configure Loguru
+logger.add("stock_bot_logs.log", rotation="10 MB")
 
 # Configure Logging
 logging.basicConfig(
@@ -29,7 +35,7 @@ analytics = Analytics()
 
 # Initialize modules
 fetcher = DataFetcher(API_KEY, API_SECRET, BASE_URL)
-order_manager = OrderManager(fetcher.api)
+order_manager = OrderManager(api=fetcher.api, fetcher=fetcher)
 
 # Strategies
 strategies = {
@@ -100,11 +106,27 @@ async def execute_trades(current_strategy: str = default_strategy):
             logging.error(f"Error in trade execution loop for {symbol}: {e}")
 
         await asyncio.sleep(60)  # Run the loop every 60 seconds
+        
+def backtest_strategy(strategy_name, historical_data):
+    """Backtest a given strategy on historical data."""
+    strategy = strategies[strategy_name]
+    backtester = Backtester(strategy)
+    results = backtester.run(historical_data)
+    analytics.update_trade(results - fetcher.get_portfolio_gain_loss()["current_equity"], strategy_name)
+    logging.info(f"Backtest results for {strategy_name}: {results}")
+    return results
 
 if __name__ == "__main__":
+    # Backtest before live trading
+    historical_data = fetcher.get_historical_data(symbol, "minute", limit=1000)
+    for strat in strategies:
+        backtest_strategy(strat, historical_data)
+        
+     # Switch to live trading after backtesting
     try:
-        asyncio.run(execute_trades())  # Use asyncio.run() for better loop management
+        asyncio.run(execute_trades())
     except KeyboardInterrupt:
-        logging.info("Trading bot stopped manually.")
+        logger.info("Trading bot stopped manually.")
     except Exception as e:
-        logging.critical(f"Critical error in trading bot: {e}")
+        logger.critical(f"Critical error: {e}")
+        send_alert("Critical Error in Trading Bot", str(e))

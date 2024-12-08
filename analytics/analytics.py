@@ -35,6 +35,11 @@ class Analytics:
 
         logging.info(f"Trade updated. Profit/Loss: {profit_loss}, Strategy: {strategy}, Total Profit: {self.total_profit}")
 
+        def update_sector_analysis(self, sector_data):
+            """Update sector performance analytics."""
+            self.sector_performance = sector_data
+            logging.info(f"Sector performance updated: {self.sector_performance}")
+
     def get_sharpe_ratio(self):
         """Calculate the Sharpe ratio."""
         if len(self.trade_history) < 2:

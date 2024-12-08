@@ -64,8 +64,13 @@
         </table>
 
         <h3>Strategy Performance</h3>
-        <div id="heatmap">
-            <!-- Heatmap visualization will be dynamically added -->
+        <div id="heatmap-container">
+            <div id="heatmap-placeholder">
+                <p>Loading heatmap data...</p>
+            </div>
+            <div id="heatmap" style="display: none;">
+                <!-- Heatmap visualization will be dynamically added -->
+            </div>
         </div>
 
         <h2 id="news">News & Sentiment</h2>
@@ -83,37 +88,20 @@
         </table>
     </div>
 
-    <h3>Strategy Monitoring</h3>
-    <p>Current Strategy: <strong>{{ current_strategy }}</strong></p>
-    <form action="/update-strategy" method="POST">
-        <label for="strategy">Switch Strategy:</label>
-        <select id="strategy" name="strategy">
-            <option value="rsi" {% if current_strategy=='rsi' %}selected{% endif %}>RSI</option>
-            <option value="macd" {% if current_strategy=='macd' %}selected{% endif %}>MACD</option>
-            <option value="bollinger" {% if current_strategy=='bollinger' %}selected{% endif %}>Bollinger Bands
-            </option>
-        </select>
-        <button type="submit">Update Strategy</button>
-    </form>
-    </div>
-    <script src="/static/heatmap.js"></script>
-    <div id="heatmap-container">
-        <div id="heatmap-placeholder">
-            <p>Loading heatmap data...</p>
-        </div>
-        <div id="heatmap" style="display: none;">
-            <!-- Heatmap visualization will be dynamically added -->
-        </div>
-    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.min.js"></script>
     <script>
+        const socket = io();
+        socket.on("real_time_data", (data) => {
+            document.getElementById("portfolio-section").innerHTML = JSON.stringify(data.portfolio, null, 2);
+            document.getElementById("analytics-section").innerHTML = JSON.stringify(data.analytics, null, 2);
+        });
+
         fetch('/api/analytics')
             .then(response => response.json())
             .then(data => {
-                // Hide placeholder
                 document.getElementById("heatmap-placeholder").style.display = "none";
                 document.getElementById("heatmap").style.display = "block";
-    
-                // Render heatmap with tooltips
+
                 const heatmapData = data.strategy_performance;
                 renderHeatmap(heatmapData);
             })
@@ -121,7 +109,6 @@
                 document.getElementById("heatmap-placeholder").innerHTML = "<p>Failed to load heatmap data.</p>";
             });
     </script>
-    
 </body>
 
 </html>

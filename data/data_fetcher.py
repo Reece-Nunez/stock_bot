@@ -1,7 +1,9 @@
+import os
 from time import sleep
 from alpaca_trade_api import REST
 import pandas as pd
 import logging
+import requests
 
 logging.basicConfig(
     filename="stock_bot_logs.log",
@@ -12,6 +14,18 @@ logging.basicConfig(
 class DataFetcher:
     def __init__(self, api_key, api_secret, base_url):
         self.api = REST(api_key, api_secret, base_url)
+        
+    def get_sector_analysis(self):
+        """Fetch sector performance data from Alpha Vantage."""
+        api_key = os.getenv("ALPHA_VANTAGE_API_KEY")
+        url = f"https://www.alphavantage.co/query?function=SECTOR&apikey={api_key}"
+        try:
+            response = requests.get(url)
+            data = response.json()
+            return data["Rank A: Real-Time Performance"]
+        except Exception as e:
+            logging.error(f"Failed to fetch sector performance: {e}")
+            return {}
 
     def get_historical_data(self, symbol, timeframe, limit=1000, retries=3):
         """Fetch historical data for the given symbol with retry logic."""
