@@ -198,3 +198,587 @@
 2024-12-08T19:55:41.187624+0000 DEBUG Raw response for AAPL: []
 2024-12-08T19:55:41.187816+0000 WARNING No data returned for AAPL. Retrying...
 2024-12-08T19:55:41.188034+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: Empty data response
+2024-12-08T19:59:50.731858+0000 INFO Active strategy: rsi
+2024-12-08T19:59:50.732555+0000 DEBUG Attempting to fetch historical data for AAPL with timeframe 1Min, limit 100. Attempt 1
+2024-12-08T19:59:50.909382+0000 DEBUG Raw response for AAPL: []
+2024-12-08T19:59:50.909689+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T19:59:50.909941+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: Empty data response
+2024-12-08T19:59:52.910293+0000 DEBUG Attempting to fetch historical data for AAPL with timeframe 1Min, limit 100. Attempt 2
+2024-12-08T19:59:52.970172+0000 DEBUG Raw response for AAPL: []
+2024-12-08T19:59:52.970373+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T19:59:52.970744+0000 WARNING Retrying AAPL historical data fetch... Attempt 2. Error: Empty data response
+2024-12-08T19:59:56.971194+0000 DEBUG Attempting to fetch historical data for AAPL with timeframe 1Min, limit 100. Attempt 3
+2024-12-08T19:59:57.030434+0000 DEBUG Raw response for AAPL: []
+2024-12-08T19:59:57.030656+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T19:59:57.030830+0000 WARNING Retrying AAPL historical data fetch... Attempt 3. Error: Empty data response
+2024-12-08T20:00:05.031107+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T20:00:05.032607+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T20:00:22.296595+0000 INFO Trading bot stopped manually.
+2024-12-08T20:00:22.296882+0000 DEBUG Attempting to fetch historical data for AAPL with timeframe 1Min, limit 1000. Attempt 1
+2024-12-08T20:00:22.360003+0000 DEBUG Raw response for AAPL: []
+2024-12-08T20:00:22.360138+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:00:22.360303+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: Empty data response
+2024-12-08T20:02:01.416187+0000 INFO Active strategy: rsi
+2024-12-08T20:02:01.416924+0000 DEBUG Attempting to fetch historical data for AAPL with timeframe 1Min, limit 100. Attempt 1
+2024-12-08T20:02:01.612235+0000 DEBUG Raw response for AAPL: []
+2024-12-08T20:02:01.612414+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:02:01.612774+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: Empty data response
+2024-12-08T20:02:03.613112+0000 DEBUG Attempting to fetch historical data for AAPL with timeframe 1Min, limit 100. Attempt 2
+2024-12-08T20:02:03.674137+0000 DEBUG Raw response for AAPL: []
+2024-12-08T20:02:03.674293+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:02:03.674716+0000 WARNING Retrying AAPL historical data fetch... Attempt 2. Error: Empty data response
+2024-12-08T20:02:07.675049+0000 DEBUG Attempting to fetch historical data for AAPL with timeframe 1Min, limit 100. Attempt 3
+2024-12-08T20:02:07.736260+0000 DEBUG Raw response for AAPL: []
+2024-12-08T20:02:07.736404+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:02:07.736581+0000 WARNING Retrying AAPL historical data fetch... Attempt 3. Error: Empty data response
+2024-12-08T20:02:15.736823+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T20:02:15.738093+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T20:02:48.588326+0000 INFO Trading bot stopped manually.
+2024-12-08T20:02:48.588622+0000 DEBUG Attempting to fetch historical data for AAPL with timeframe 1Min, limit 1000. Attempt 1
+2024-12-08T20:02:48.650132+0000 DEBUG Raw response for AAPL: []
+2024-12-08T20:02:48.650254+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:02:48.650417+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: Empty data response
+2024-12-08T20:11:43.855672+0000 INFO Fetching data for AAPL with timeframe 1Day. Attempt 1
+2024-12-08T20:11:44.043360+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:11:44.043681+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:11:44.043911+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: Empty data response
+2024-12-08T20:11:46.044158+0000 INFO Fetching data for AAPL with timeframe 1Day. Attempt 2
+2024-12-08T20:11:46.105230+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:11:46.105727+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:11:46.106154+0000 WARNING Retrying AAPL historical data fetch... Attempt 2. Error: Empty data response
+2024-12-08T20:11:50.106581+0000 INFO Fetching data for AAPL with timeframe 1Day. Attempt 3
+2024-12-08T20:11:50.168325+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:11:50.168543+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:11:50.168698+0000 WARNING Retrying AAPL historical data fetch... Attempt 3. Error: Empty data response
+2024-12-08T20:11:58.168976+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T20:17:46.800878+0000 INFO Fetching data for AAPL with timeframe 1Day, limit 10. Attempt 1
+2024-12-08T20:17:46.985946+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:17:46.986275+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:17:46.986509+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: Empty data response
+2024-12-08T20:17:48.988453+0000 INFO Fetching data for AAPL with timeframe 1Day, limit 10. Attempt 2
+2024-12-08T20:17:49.050518+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:17:49.050769+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:17:49.050952+0000 WARNING Retrying AAPL historical data fetch... Attempt 2. Error: Empty data response
+2024-12-08T20:17:53.051906+0000 INFO Fetching data for AAPL with timeframe 1Day, limit 10. Attempt 3
+2024-12-08T20:17:53.111103+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:17:53.111354+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:17:53.111550+0000 WARNING Retrying AAPL historical data fetch... Attempt 3. Error: Empty data response
+2024-12-08T20:18:01.119949+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T20:18:01.122012+0000 ERROR No historical data available for AAPL. Exiting.
+2024-12-08T20:20:00.395640+0000 INFO Active strategy: rsi
+2024-12-08T20:20:00.396134+0000 INFO Starting backtesting...
+2024-12-08T20:20:00.396379+0000 INFO Fetching historical data for backtesting AAPL...
+2024-12-08T20:20:00.396618+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 1000. Attempt 1
+2024-12-08T20:20:00.569005+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:20:00.569289+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:20:00.569526+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: Empty data response
+2024-12-08T20:20:02.572015+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 1000. Attempt 2
+2024-12-08T20:20:02.633301+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:20:02.633797+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:20:02.634090+0000 WARNING Retrying AAPL historical data fetch... Attempt 2. Error: Empty data response
+2024-12-08T20:20:06.635924+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 1000. Attempt 3
+2024-12-08T20:20:06.697553+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:20:06.697770+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:20:06.697926+0000 WARNING Retrying AAPL historical data fetch... Attempt 3. Error: Empty data response
+2024-12-08T20:20:14.706318+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T20:20:14.707722+0000 ERROR No historical data available for AAPL. Skipping backtesting.
+2024-12-08T20:20:14.708004+0000 INFO Backtesting complete.
+2024-12-08T20:20:14.708228+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 1
+2024-12-08T20:20:14.769633+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:20:14.770073+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:20:14.770265+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: Empty data response
+2024-12-08T20:20:16.771911+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 2
+2024-12-08T20:20:16.833176+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:20:16.833409+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:20:16.833568+0000 WARNING Retrying AAPL historical data fetch... Attempt 2. Error: Empty data response
+2024-12-08T20:20:20.837766+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 3
+2024-12-08T20:20:20.900824+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:20:20.901052+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:20:20.901203+0000 WARNING Retrying AAPL historical data fetch... Attempt 3. Error: Empty data response
+2024-12-08T20:20:28.909515+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T20:20:28.910324+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T20:21:28.931219+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 1
+2024-12-08T20:21:28.995912+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:21:28.996263+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:21:28.996494+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: Empty data response
+2024-12-08T20:21:30.998863+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 2
+2024-12-08T20:21:31.059359+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:21:31.059609+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:21:31.059819+0000 WARNING Retrying AAPL historical data fetch... Attempt 2. Error: Empty data response
+2024-12-08T20:21:35.063895+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 3
+2024-12-08T20:21:35.126341+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:21:35.126726+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:21:35.126961+0000 WARNING Retrying AAPL historical data fetch... Attempt 3. Error: Empty data response
+2024-12-08T20:21:43.131911+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T20:21:43.132661+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T20:22:43.184255+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 1
+2024-12-08T20:22:43.247479+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:22:43.247670+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:22:43.247874+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: Empty data response
+2024-12-08T20:22:45.250210+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 2
+2024-12-08T20:22:45.311329+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:22:45.311542+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:22:45.311710+0000 WARNING Retrying AAPL historical data fetch... Attempt 2. Error: Empty data response
+2024-12-08T20:22:49.316079+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 3
+2024-12-08T20:22:49.376890+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:22:49.377180+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:22:49.377360+0000 WARNING Retrying AAPL historical data fetch... Attempt 3. Error: Empty data response
+2024-12-08T20:22:57.385737+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T20:22:57.386513+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T20:23:57.399949+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 1
+2024-12-08T20:23:57.462417+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:23:57.462795+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:23:57.463061+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: Empty data response
+2024-12-08T20:23:59.465468+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 2
+2024-12-08T20:23:59.527082+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:23:59.527333+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:23:59.527519+0000 WARNING Retrying AAPL historical data fetch... Attempt 2. Error: Empty data response
+2024-12-08T20:24:03.531852+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 3
+2024-12-08T20:24:03.593061+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:24:03.593267+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:24:03.593446+0000 WARNING Retrying AAPL historical data fetch... Attempt 3. Error: Empty data response
+2024-12-08T20:24:11.600000+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T20:24:11.600805+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T20:25:11.639241+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 1
+2024-12-08T20:25:11.703985+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:25:11.704236+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:25:11.704444+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: Empty data response
+2024-12-08T20:25:13.706843+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 2
+2024-12-08T20:25:13.767943+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:25:13.768176+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:25:13.768363+0000 WARNING Retrying AAPL historical data fetch... Attempt 2. Error: Empty data response
+2024-12-08T20:25:17.771879+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 3
+2024-12-08T20:25:17.833137+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:25:17.833403+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:25:17.833620+0000 WARNING Retrying AAPL historical data fetch... Attempt 3. Error: Empty data response
+2024-12-08T20:25:25.834650+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T20:25:25.835507+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T20:26:25.837938+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 1
+2024-12-08T20:26:25.901515+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:26:25.901762+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:26:25.901952+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: Empty data response
+2024-12-08T20:26:27.904260+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 2
+2024-12-08T20:26:27.964157+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:26:27.964394+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:26:27.964538+0000 WARNING Retrying AAPL historical data fetch... Attempt 2. Error: Empty data response
+2024-12-08T20:26:31.968880+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 3
+2024-12-08T20:26:32.029528+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:26:32.029792+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:26:32.030039+0000 WARNING Retrying AAPL historical data fetch... Attempt 3. Error: Empty data response
+2024-12-08T20:26:40.038448+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T20:26:40.039241+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T20:27:40.066747+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 1
+2024-12-08T20:27:40.131170+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:27:40.131595+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:27:40.131986+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: Empty data response
+2024-12-08T20:27:42.134428+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 2
+2024-12-08T20:27:42.194407+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:27:42.194650+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:27:42.194820+0000 WARNING Retrying AAPL historical data fetch... Attempt 2. Error: Empty data response
+2024-12-08T20:27:46.195901+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 3
+2024-12-08T20:27:46.255661+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:27:46.256064+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:27:46.256320+0000 WARNING Retrying AAPL historical data fetch... Attempt 3. Error: Empty data response
+2024-12-08T20:27:54.263882+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T20:27:54.264635+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T20:28:54.290882+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 1
+2024-12-08T20:28:54.354551+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:28:54.354766+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:28:54.354972+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: Empty data response
+2024-12-08T20:28:56.355881+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 2
+2024-12-08T20:28:56.416739+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:28:56.416990+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:28:56.417137+0000 WARNING Retrying AAPL historical data fetch... Attempt 2. Error: Empty data response
+2024-12-08T20:29:00.421458+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 3
+2024-12-08T20:29:00.482850+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:29:00.483026+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:29:00.483203+0000 WARNING Retrying AAPL historical data fetch... Attempt 3. Error: Empty data response
+2024-12-08T20:29:08.491552+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T20:29:08.492369+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T20:30:08.531857+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 1
+2024-12-08T20:30:08.594618+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:30:08.594861+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:30:08.595102+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: Empty data response
+2024-12-08T20:30:10.597563+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 2
+2024-12-08T20:30:10.658292+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:30:10.658610+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:30:10.658875+0000 WARNING Retrying AAPL historical data fetch... Attempt 2. Error: Empty data response
+2024-12-08T20:30:14.663323+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 3
+2024-12-08T20:30:14.727349+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:30:14.727591+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:30:14.727836+0000 WARNING Retrying AAPL historical data fetch... Attempt 3. Error: Empty data response
+2024-12-08T20:30:22.736191+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T20:30:22.737022+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T20:31:22.797413+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 1
+2024-12-08T20:31:22.861383+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:31:22.861577+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:31:22.861737+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: Empty data response
+2024-12-08T20:31:24.865160+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 2
+2024-12-08T20:31:24.924289+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:31:24.924485+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:31:24.924688+0000 WARNING Retrying AAPL historical data fetch... Attempt 2. Error: Empty data response
+2024-12-08T20:31:28.927909+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 3
+2024-12-08T20:31:28.987339+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:31:28.987616+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:31:28.987873+0000 WARNING Retrying AAPL historical data fetch... Attempt 3. Error: Empty data response
+2024-12-08T20:31:36.996245+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T20:31:36.997114+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T20:32:37.051414+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 1
+2024-12-08T20:32:37.116221+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:32:37.116479+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:32:37.116649+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: Empty data response
+2024-12-08T20:32:39.118988+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 2
+2024-12-08T20:32:39.180516+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:32:39.180928+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:32:39.181173+0000 WARNING Retrying AAPL historical data fetch... Attempt 2. Error: Empty data response
+2024-12-08T20:32:43.185614+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 3
+2024-12-08T20:32:43.246325+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:32:43.246673+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:32:43.246901+0000 WARNING Retrying AAPL historical data fetch... Attempt 3. Error: Empty data response
+2024-12-08T20:32:51.255292+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T20:32:51.256132+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T20:33:51.311743+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 1
+2024-12-08T20:33:51.374855+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:33:51.375210+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:33:51.375421+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: Empty data response
+2024-12-08T20:33:53.375909+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 2
+2024-12-08T20:33:53.437635+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:33:53.437913+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:33:53.438209+0000 WARNING Retrying AAPL historical data fetch... Attempt 2. Error: Empty data response
+2024-12-08T20:33:57.439904+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 3
+2024-12-08T20:33:57.499079+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:33:57.499381+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:33:57.499599+0000 WARNING Retrying AAPL historical data fetch... Attempt 3. Error: Empty data response
+2024-12-08T20:34:05.507982+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T20:34:05.508736+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T20:35:05.569104+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 1
+2024-12-08T20:35:05.631091+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:35:05.631302+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:35:05.631451+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: Empty data response
+2024-12-08T20:35:07.631917+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 2
+2024-12-08T20:35:07.692290+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:35:07.692582+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:35:07.692914+0000 WARNING Retrying AAPL historical data fetch... Attempt 2. Error: Empty data response
+2024-12-08T20:35:11.697321+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 3
+2024-12-08T20:35:11.757347+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:35:11.757627+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:35:11.757910+0000 WARNING Retrying AAPL historical data fetch... Attempt 3. Error: Empty data response
+2024-12-08T20:35:19.761262+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T20:35:19.762014+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T20:36:19.813732+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 1
+2024-12-08T20:36:19.876508+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:36:19.876728+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:36:19.876935+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: Empty data response
+2024-12-08T20:36:21.879283+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 2
+2024-12-08T20:36:21.939170+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:36:21.939370+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:36:21.939574+0000 WARNING Retrying AAPL historical data fetch... Attempt 2. Error: Empty data response
+2024-12-08T20:36:25.943903+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 3
+2024-12-08T20:36:26.002034+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:36:26.002240+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:36:26.002444+0000 WARNING Retrying AAPL historical data fetch... Attempt 3. Error: Empty data response
+2024-12-08T20:36:34.010787+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T20:36:34.011561+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T20:37:34.054356+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 1
+2024-12-08T20:37:34.117959+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:37:34.118126+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:37:34.118301+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: Empty data response
+2024-12-08T20:37:36.120605+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 2
+2024-12-08T20:37:36.181385+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:37:36.181592+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:37:36.181790+0000 WARNING Retrying AAPL historical data fetch... Attempt 2. Error: Empty data response
+2024-12-08T20:37:40.186158+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 3
+2024-12-08T20:37:40.247064+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:37:40.247299+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:37:40.247513+0000 WARNING Retrying AAPL historical data fetch... Attempt 3. Error: Empty data response
+2024-12-08T20:37:48.255868+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T20:37:48.256635+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T20:38:48.314340+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 1
+2024-12-08T20:38:48.376801+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:38:48.376994+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:38:48.377155+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: Empty data response
+2024-12-08T20:38:50.379547+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 2
+2024-12-08T20:38:50.439860+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:38:50.440125+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:38:50.440310+0000 WARNING Retrying AAPL historical data fetch... Attempt 2. Error: Empty data response
+2024-12-08T20:38:54.443898+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 3
+2024-12-08T20:38:54.505516+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:38:54.505885+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:38:54.506107+0000 WARNING Retrying AAPL historical data fetch... Attempt 3. Error: Empty data response
+2024-12-08T20:39:02.509349+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T20:39:02.510187+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T20:40:02.566327+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 1
+2024-12-08T20:40:02.628653+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:40:02.628847+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:40:02.629006+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: Empty data response
+2024-12-08T20:40:04.631320+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 2
+2024-12-08T20:40:04.692390+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:40:04.692906+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:40:04.693207+0000 WARNING Retrying AAPL historical data fetch... Attempt 2. Error: Empty data response
+2024-12-08T20:40:08.697687+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 3
+2024-12-08T20:40:08.755758+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:40:08.755979+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:40:08.756146+0000 WARNING Retrying AAPL historical data fetch... Attempt 3. Error: Empty data response
+2024-12-08T20:40:16.762146+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T20:40:16.762919+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T20:41:16.814811+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 1
+2024-12-08T20:41:16.878441+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:41:16.878671+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:41:16.878873+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: Empty data response
+2024-12-08T20:41:18.879920+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 2
+2024-12-08T20:41:18.941847+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:41:18.942067+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:41:18.942212+0000 WARNING Retrying AAPL historical data fetch... Attempt 2. Error: Empty data response
+2024-12-08T20:41:22.946558+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 3
+2024-12-08T20:41:23.006707+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:41:23.006930+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:41:23.007093+0000 WARNING Retrying AAPL historical data fetch... Attempt 3. Error: Empty data response
+2024-12-08T20:41:31.015429+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T20:41:31.016280+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T20:42:31.075894+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 1
+2024-12-08T20:42:31.140202+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:42:31.140481+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:42:31.140703+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: Empty data response
+2024-12-08T20:42:33.143032+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 2
+2024-12-08T20:42:33.202272+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:42:33.202637+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:42:33.202855+0000 WARNING Retrying AAPL historical data fetch... Attempt 2. Error: Empty data response
+2024-12-08T20:42:37.207231+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 3
+2024-12-08T20:42:37.267739+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:42:37.268064+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:42:37.268272+0000 WARNING Retrying AAPL historical data fetch... Attempt 3. Error: Empty data response
+2024-12-08T20:42:45.276628+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T20:42:45.277427+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T20:43:45.311936+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 1
+2024-12-08T20:43:45.374553+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:43:45.374805+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:43:45.374990+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: Empty data response
+2024-12-08T20:43:47.377371+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 2
+2024-12-08T20:43:47.436863+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:43:47.437071+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:43:47.437255+0000 WARNING Retrying AAPL historical data fetch... Attempt 2. Error: Empty data response
+2024-12-08T20:43:51.441565+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 3
+2024-12-08T20:43:51.501641+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:43:51.502229+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:43:51.502516+0000 WARNING Retrying AAPL historical data fetch... Attempt 3. Error: Empty data response
+2024-12-08T20:43:59.510997+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T20:43:59.511802+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T20:44:59.569432+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 1
+2024-12-08T20:44:59.632198+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:44:59.632461+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:44:59.632652+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: Empty data response
+2024-12-08T20:45:01.634972+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 2
+2024-12-08T20:45:01.694693+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:45:01.695001+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:45:01.695212+0000 WARNING Retrying AAPL historical data fetch... Attempt 2. Error: Empty data response
+2024-12-08T20:45:05.698134+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 3
+2024-12-08T20:45:05.757213+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:45:05.757444+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:45:05.757674+0000 WARNING Retrying AAPL historical data fetch... Attempt 3. Error: Empty data response
+2024-12-08T20:45:13.766056+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T20:45:13.766833+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T20:46:13.827195+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 1
+2024-12-08T20:46:13.889700+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:46:13.889872+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:46:13.890039+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: Empty data response
+2024-12-08T20:46:15.891895+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 2
+2024-12-08T20:46:15.952393+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:46:15.952640+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:46:15.952778+0000 WARNING Retrying AAPL historical data fetch... Attempt 2. Error: Empty data response
+2024-12-08T20:46:19.957116+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 3
+2024-12-08T20:46:20.016928+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:46:20.017228+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:46:20.017444+0000 WARNING Retrying AAPL historical data fetch... Attempt 3. Error: Empty data response
+2024-12-08T20:46:28.025807+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T20:46:28.026602+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T20:47:28.066050+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 1
+2024-12-08T20:47:28.130045+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:47:28.130273+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:47:28.130517+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: Empty data response
+2024-12-08T20:47:30.132864+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 2
+2024-12-08T20:47:30.193172+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:47:30.193377+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:47:30.193575+0000 WARNING Retrying AAPL historical data fetch... Attempt 2. Error: Empty data response
+2024-12-08T20:47:34.197914+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 3
+2024-12-08T20:47:34.257794+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:47:34.258039+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:47:34.258232+0000 WARNING Retrying AAPL historical data fetch... Attempt 3. Error: Empty data response
+2024-12-08T20:47:42.260345+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T20:47:42.261141+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T20:48:42.297409+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 1
+2024-12-08T20:48:42.360396+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:48:42.360893+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:48:42.361206+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: Empty data response
+2024-12-08T20:48:44.363671+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 2
+2024-12-08T20:48:44.423408+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:48:44.423663+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:48:44.423883+0000 WARNING Retrying AAPL historical data fetch... Attempt 2. Error: Empty data response
+2024-12-08T20:48:48.428210+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 100. Attempt 3
+2024-12-08T20:48:48.488519+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:48:48.488881+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:48:48.489112+0000 WARNING Retrying AAPL historical data fetch... Attempt 3. Error: Empty data response
+2024-12-08T20:48:56.497478+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T20:48:56.498252+0000 WARNING No data available for AAPL. Retrying in 60 seconds.
+2024-12-08T20:49:55.935700+0000 INFO Trading bot stopped manually.
+2024-12-08T20:52:46.303570+0000 WARNING Market is closed. Exiting.
+2024-12-08T20:56:46.109241+0000 ERROR Failed to place market order: forbidden.
+2024-12-08T20:56:46.111477+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T20:56:46.112482+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T20:56:46.112642+0000 INFO Trade updated. Profit/Loss: -50, Strategy: rsi, Total Profit: 50
+2024-12-08T20:56:46.113019+0000 INFO Sharpe Ratio calculated: 0.33
+2024-12-08T20:56:46.205075+0000 INFO Market order placed: <MagicMock name='mock.submit_order()' id='131244469156992'>
+2024-12-08T20:56:46.207449+0000 INFO Bracket order placed: <MagicMock name='mock.submit_order()' id='131244465277072'>
+2024-12-08T20:59:50.163753+0000 ERROR Failed to place market order: forbidden.
+2024-12-08T20:59:50.166171+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T20:59:50.167270+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T20:59:50.167440+0000 INFO Trade updated. Profit/Loss: -50, Strategy: rsi, Total Profit: 50
+2024-12-08T20:59:50.167842+0000 INFO Sharpe Ratio calculated: 0.33
+2024-12-08T20:59:50.170020+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 1. Attempt 1
+2024-12-08T20:59:50.170855+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:59:50.171049+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:59:50.171215+0000 WARNING Retrying AAPL historical data fetch... Attempt 1. Error: Empty data response
+2024-12-08T20:59:52.173588+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 1. Attempt 2
+2024-12-08T20:59:52.174059+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:59:52.174275+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:59:52.174476+0000 WARNING Retrying AAPL historical data fetch... Attempt 2. Error: Empty data response
+2024-12-08T20:59:56.178837+0000 INFO Fetching data for AAPL with timeframe 1Min, limit 1. Attempt 3
+2024-12-08T20:59:56.179274+0000 INFO Raw bars response for AAPL: []
+2024-12-08T20:59:56.179476+0000 WARNING No data returned for AAPL. Retrying...
+2024-12-08T20:59:56.179659+0000 WARNING Retrying AAPL historical data fetch... Attempt 3. Error: Empty data response
+2024-12-08T21:00:04.187887+0000 ERROR Failed to fetch historical data for AAPL after 3 attempts.
+2024-12-08T21:00:04.344550+0000 INFO Market order placed: <MagicMock name='mock.submit_order()' id='137844968510128'>
+2024-12-08T21:00:04.348989+0000 INFO Bracket order placed: <MagicMock name='mock.submit_order()' id='137844969017168'>
+2024-12-08T21:05:16.582291+0000 ERROR Failed to place market order: forbidden.
+2024-12-08T21:05:16.584623+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T21:05:16.585665+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T21:05:16.585805+0000 INFO Trade updated. Profit/Loss: -50, Strategy: rsi, Total Profit: 50
+2024-12-08T21:05:16.586190+0000 INFO Sharpe Ratio calculated: 0.33
+2024-12-08T21:05:16.589075+0000 INFO Fetching historical data for backtesting AAPL...
+2024-12-08T21:05:16.589299+0000 INFO Backtesting strategy: rsi
+2024-12-08T21:05:16.589744+0000 INFO Starting backtesting...
+2024-12-08T21:05:16.597449+0000 INFO Final Balance: $10000.00, Cumulative Returns: 0.00
+2024-12-08T21:05:16.597949+0000 INFO Results for rsi: 10000
+2024-12-08T21:05:16.601374+0000 INFO Fetching historical data for backtesting AAPL...
+2024-12-08T21:05:16.601567+0000 INFO Backtesting strategy: rsi
+2024-12-08T21:05:16.601719+0000 INFO Starting backtesting...
+2024-12-08T21:05:16.604733+0000 INFO Final Balance: $10000.00, Cumulative Returns: 0.00
+2024-12-08T21:05:16.605086+0000 INFO Results for rsi: 10000
+2024-12-08T21:06:16.779358+0000 INFO Market order placed: <MagicMock name='mock.submit_order()' id='133320169907712'>
+2024-12-08T21:06:16.781696+0000 INFO Bracket order placed: <MagicMock name='mock.submit_order()' id='133320169959456'>
+2024-12-08T21:07:25.580268+0000 ERROR Failed to place market order: forbidden.
+2024-12-08T21:07:25.582517+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T21:07:25.583628+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T21:07:25.583821+0000 INFO Trade updated. Profit/Loss: -50, Strategy: rsi, Total Profit: 50
+2024-12-08T21:07:25.584208+0000 INFO Sharpe Ratio calculated: 0.33
+2024-12-08T21:07:25.587142+0000 INFO Fetching historical data for backtesting AAPL...
+2024-12-08T21:07:25.587403+0000 INFO Backtesting strategy: rsi
+2024-12-08T21:07:25.587566+0000 INFO Starting backtesting...
+2024-12-08T21:07:25.592042+0000 INFO Final Balance: $10000.00, Cumulative Returns: 0.00
+2024-12-08T21:07:25.592224+0000 INFO Results for rsi: 10000
+2024-12-08T21:07:25.595661+0000 INFO Fetching historical data for backtesting AAPL...
+2024-12-08T21:07:25.595918+0000 INFO Backtesting strategy: rsi
+2024-12-08T21:07:25.596077+0000 INFO Starting backtesting...
+2024-12-08T21:07:25.599118+0000 INFO Final Balance: $10000.00, Cumulative Returns: 0.00
+2024-12-08T21:07:25.599311+0000 INFO Results for rsi: 10000
+2024-12-08T21:10:25.810538+0000 INFO Market order placed: <MagicMock name='mock.submit_order()' id='123792987289984'>
+2024-12-08T21:10:25.812883+0000 INFO Bracket order placed: <MagicMock name='mock.submit_order()' id='123793132821472'>
+2024-12-08T21:14:44.157355+0000 ERROR Failed to place market order: forbidden.
+2024-12-08T21:14:44.160427+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T21:14:44.161864+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T21:14:44.162105+0000 INFO Trade updated. Profit/Loss: -50, Strategy: rsi, Total Profit: 50
+2024-12-08T21:14:44.162566+0000 INFO Sharpe Ratio calculated: 0.33
+2024-12-08T21:14:44.172091+0000 INFO Fetching historical data for backtesting AAPL...
+2024-12-08T21:14:44.172466+0000 INFO Backtesting strategy: rsi
+2024-12-08T21:14:44.172735+0000 INFO Starting backtesting...
+2024-12-08T21:14:44.178861+0000 INFO Final Balance: $10000.00, Cumulative Returns: 0.00
+2024-12-08T21:14:44.179202+0000 INFO Results for rsi: 10000
+2024-12-08T21:14:44.185424+0000 INFO Fetching historical data for backtesting AAPL...
+2024-12-08T21:14:44.185684+0000 INFO Backtesting strategy: rsi
+2024-12-08T21:14:44.185977+0000 INFO Starting backtesting...
+2024-12-08T21:14:44.191366+0000 INFO Final Balance: $10000.00, Cumulative Returns: 0.00
+2024-12-08T21:14:44.191549+0000 INFO Results for rsi: 10000
+2024-12-08T21:17:44.433142+0000 INFO Market order placed: <MagicMock name='mock.submit_order()' id='138507751595408'>
+2024-12-08T21:17:44.435469+0000 INFO Bracket order placed: <MagicMock name='mock.submit_order()' id='138507751565232'>
+2024-12-08T21:20:45.488003+0000 ERROR Failed to place market order: forbidden.
+2024-12-08T21:20:45.490156+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T21:20:45.491230+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T21:20:45.491456+0000 INFO Trade updated. Profit/Loss: -50, Strategy: rsi, Total Profit: 50
+2024-12-08T21:20:45.491867+0000 INFO Sharpe Ratio calculated: 0.33
+2024-12-08T21:20:45.494805+0000 INFO Fetching historical data for backtesting AAPL...
+2024-12-08T21:20:45.495399+0000 INFO Backtesting strategy: rsi
+2024-12-08T21:20:45.495660+0000 INFO Starting backtesting...
+2024-12-08T21:20:45.499656+0000 INFO Final Balance: $10000.00, Cumulative Returns: 0.00
+2024-12-08T21:20:45.499837+0000 INFO Results for rsi: 10000
+2024-12-08T21:20:45.503137+0000 INFO Fetching historical data for backtesting AAPL...
+2024-12-08T21:20:45.503395+0000 INFO Backtesting strategy: rsi
+2024-12-08T21:20:45.503562+0000 INFO Starting backtesting...
+2024-12-08T21:20:45.506820+0000 INFO Final Balance: $10000.00, Cumulative Returns: 0.00
+2024-12-08T21:20:45.506988+0000 INFO Results for rsi: 10000
+2024-12-08T21:20:45.516002+0000 DEBUG Iteration 1: Current signal: 0, Last signal: None
+2024-12-08T21:20:45.516135+0000 INFO Signal changed to 0. Triggering trade.
+2024-12-08T21:21:45.571564+0000 DEBUG Iteration 2: Current signal: 0, Last signal: 0
+2024-12-08T21:21:45.571851+0000 INFO No signal change. No trade executed.
+2024-12-08T21:22:45.613386+0000 DEBUG Iteration 3: Current signal: 0, Last signal: 0
+2024-12-08T21:22:45.613671+0000 INFO No signal change. No trade executed.
+2024-12-08T21:23:45.727442+0000 INFO Market order placed: <MagicMock name='mock.submit_order()' id='136376475003040'>
+2024-12-08T21:23:45.729838+0000 INFO Bracket order placed: <MagicMock name='mock.submit_order()' id='136376474972720'>
+2024-12-08T21:49:01.947919+0000 ERROR Failed to place market order: forbidden.
+2024-12-08T21:49:01.950154+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T21:49:01.951250+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T21:49:01.951467+0000 INFO Trade updated. Profit/Loss: -50, Strategy: rsi, Total Profit: 50
+2024-12-08T21:49:01.951848+0000 INFO Sharpe Ratio calculated: 0.33
+2024-12-08T21:49:01.954659+0000 INFO Fetching historical data for backtesting AAPL...
+2024-12-08T21:49:01.954975+0000 INFO Backtesting strategy: rsi
+2024-12-08T21:49:01.955206+0000 INFO Starting backtesting...
+2024-12-08T21:49:01.959490+0000 INFO Final Balance: $10000.00, Cumulative Returns: 0.00
+2024-12-08T21:49:01.959641+0000 INFO Results for rsi: 10000
+2024-12-08T21:49:01.963019+0000 INFO Fetching historical data for backtesting AAPL...
+2024-12-08T21:49:01.963210+0000 INFO Backtesting strategy: rsi
+2024-12-08T21:49:01.963350+0000 INFO Starting backtesting...
+2024-12-08T21:49:01.966514+0000 INFO Final Balance: $10000.00, Cumulative Returns: 0.00
+2024-12-08T21:49:01.966691+0000 INFO Results for rsi: 10000
+2024-12-08T21:49:01.970825+0000 DEBUG Iteration 1: Current signal: 0, Last signal: None
+2024-12-08T21:49:01.970938+0000 INFO No valid signal change. No trade executed.
+2024-12-08T21:50:02.033436+0000 DEBUG Iteration 2: Current signal: 0, Last signal: 0
+2024-12-08T21:50:02.033780+0000 INFO No valid signal change. No trade executed.
+2024-12-08T21:51:02.091560+0000 DEBUG Iteration 3: Current signal: 0, Last signal: 0
+2024-12-08T21:51:02.091739+0000 INFO No valid signal change. No trade executed.
+2024-12-08T21:52:02.232249+0000 INFO Market order placed: <MagicMock name='mock.submit_order()' id='129729953062960'>
+2024-12-08T21:52:02.234573+0000 INFO Bracket order placed: <MagicMock name='mock.submit_order()' id='129729953032688'>
+2024-12-08T22:04:21.191543+0000 ERROR Failed to place market order: forbidden.
+2024-12-08T22:04:21.193765+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T22:04:21.194884+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T22:04:21.195103+0000 INFO Trade updated. Profit/Loss: -50, Strategy: rsi, Total Profit: 50
+2024-12-08T22:04:21.195464+0000 INFO Sharpe Ratio calculated: 0.33
+2024-12-08T22:04:21.198425+0000 INFO Fetching historical data for backtesting AAPL...
+2024-12-08T22:04:21.199035+0000 INFO Backtesting strategy: rsi
+2024-12-08T22:04:21.199271+0000 INFO Starting backtesting...
+2024-12-08T22:04:21.203363+0000 INFO Final Balance: $10000.00, Cumulative Returns: 0.00
+2024-12-08T22:04:21.203528+0000 INFO Results for rsi: 10000
+2024-12-08T22:04:21.206827+0000 INFO Fetching historical data for backtesting AAPL...
+2024-12-08T22:04:21.207038+0000 INFO Backtesting strategy: rsi
+2024-12-08T22:04:21.207196+0000 INFO Starting backtesting...
+2024-12-08T22:04:21.210361+0000 INFO Final Balance: $10000.00, Cumulative Returns: 0.00
+2024-12-08T22:04:21.210550+0000 INFO Results for rsi: 10000
+2024-12-08T22:04:21.213143+0000 ERROR Error in trade execution loop: 'coroutine' object is not subscriptable
+2024-12-08T22:05:21.272060+0000 ERROR Error in trade execution loop: 'coroutine' object is not subscriptable
+2024-12-08T22:06:21.278351+0000 ERROR Error in trade execution loop: 'coroutine' object is not subscriptable
+2024-12-08T22:07:21.425373+0000 INFO Market order placed: <MagicMock name='mock.submit_order()' id='125717628893184'>
+2024-12-08T22:07:21.427595+0000 INFO Bracket order placed: <MagicMock name='mock.submit_order()' id='125717629049968'>
+2024-12-08T22:14:19.266817+0000 ERROR Failed to place market order: forbidden.
+2024-12-08T22:14:19.268910+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T22:14:19.269980+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T22:14:19.270156+0000 INFO Trade updated. Profit/Loss: -50, Strategy: rsi, Total Profit: 50
+2024-12-08T22:14:19.270546+0000 INFO Sharpe Ratio calculated: 0.33
+2024-12-08T22:14:19.273444+0000 INFO Fetching historical data for backtesting AAPL...
+2024-12-08T22:14:19.273703+0000 INFO Backtesting strategy: rsi
+2024-12-08T22:14:19.273889+0000 INFO Starting backtesting...
+2024-12-08T22:14:19.278052+0000 INFO Final Balance: $10000.00, Cumulative Returns: 0.00
+2024-12-08T22:14:19.278236+0000 INFO Results for rsi: 10000
+2024-12-08T22:14:19.281446+0000 INFO Fetching historical data for backtesting AAPL...
+2024-12-08T22:14:19.281655+0000 ERROR Error during backtesting: object DataFrame can't be used in 'await' expression
+2024-12-08T22:14:19.283699+0000 ERROR Error in trade execution loop: object DataFrame can't be used in 'await' expression
+2024-12-08T22:15:19.300021+0000 ERROR Error in trade execution loop: object DataFrame can't be used in 'await' expression
+2024-12-08T22:16:19.357265+0000 ERROR Error in trade execution loop: object DataFrame can't be used in 'await' expression
+2024-12-08T22:17:19.496236+0000 INFO Market order placed: <MagicMock name='mock.submit_order()' id='134874991570208'>
+2024-12-08T22:17:19.498549+0000 INFO Bracket order placed: <MagicMock name='mock.submit_order()' id='134874987902688'>

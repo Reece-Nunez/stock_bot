@@ -4,6 +4,7 @@ from alpaca_trade_api import REST
 import pandas as pd
 from logger_config import logger
 import requests
+import asyncio
 
 class DataFetcher:
     def __init__(self, api_key, api_secret, base_url):
@@ -21,7 +22,7 @@ class DataFetcher:
             logger.error(f"Failed to fetch sector performance: {e}")
             return {}
 
-    def get_historical_data(self, symbol, timeframe, limit=1000, retries=3):
+    async def get_historical_data(self, symbol, timeframe, limit=1000, retries=3):
         """Fetch historical data for the given symbol with retry logic."""
         # Define valid timeframes for Alpaca API
         valid_timeframes = {
@@ -41,13 +42,12 @@ class DataFetcher:
         attempt = 0
         while attempt < retries:
             try:
-                logger.debug(f"Attempting to fetch historical data for {symbol} with timeframe {alpaca_timeframe}, limit {limit}. Attempt {attempt + 1}")
+                logger.info(f"Fetching data for {symbol} with timeframe {alpaca_timeframe}, limit {limit}. Attempt {attempt + 1}")
                 
                 # Use Alpaca-compatible timeframe
-                bars = self.api.get_bars(symbol, alpaca_timeframe, limit=limit)
-                
-                logger.debug(f"Raw response for {symbol}: {bars}")
-                
+                bars = list(self.api.get_bars_iter(symbol, alpaca_timeframe, limit=limit))
+                logger.info(f"Raw bars response for {symbol}: {bars}")
+
                 if not bars:
                     logger.warning(f"No data returned for {symbol}. Retrying...")
                     raise ValueError("Empty data response")
@@ -67,11 +67,10 @@ class DataFetcher:
             except Exception as e:
                 logger.warning(f"Retrying {symbol} historical data fetch... Attempt {attempt + 1}. Error: {e}")
                 attempt += 1
-                sleep(2 ** attempt)  # Exponential backoff
-        
-            logger.error(f"Failed to fetch historical data for {symbol} after {retries} attempts.")
-            return pd.DataFrame()
-
+                await asyncio.sleep(2 ** attempt)  # Exponential backoff
+            
+        logger.error(f"Failed to fetch historical data for {symbol} after {retries} attempts.")
+        return pd.DataFrame()
 
     def get_realtime_price(self, symbol):
         """Fetch real-time price for a symbol."""
