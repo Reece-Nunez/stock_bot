@@ -2,7 +2,7 @@ import os
 import pytest
 import asyncio
 import pandas as pd
-from unittest.mock import Mock, patch
+from unittest.mock import AsyncMock, Mock, patch
 from main import execute_trades, backtest_strategies
 from data.data_fetcher import DataFetcher
 from trading.order_manager import OrderManager
@@ -37,11 +37,11 @@ async def test_backtesting_with_mock_data():
 @pytest.mark.asyncio
 async def test_execute_trades_with_mock_data():
     # Mock DataFetcher and OrderManager
-    with patch("data.data_fetcher.DataFetcher.get_historical_data", new_callable=Mock) as mock_historical_data, \
-         patch("trading.order_manager.OrderManager.place_dynamic_bracket_order", new_callable=Mock) as mock_place_order, \
+    with patch("data.data_fetcher.DataFetcher.get_historical_data", new_callable=AsyncMock) as mock_historical_data, \
+         patch("trading.order_manager.OrderManager.place_dynamic_bracket_order", new_callable=AsyncMock) as mock_place_order, \
          patch("strategies.rsi_strategy.RSIStrategy.generate_signal", new_callable=Mock) as mock_generate_signal:
 
-        # Mock historical data with signals to trigger trades
+        # Mock historical data
         mock_historical_data.return_value = pd.DataFrame({
             "time": ["2024-12-01", "2024-12-02", "2024-12-03"],
             "open": [100, 101, 102],
@@ -49,14 +49,20 @@ async def test_execute_trades_with_mock_data():
             "low": [95, 96, 97],
             "close": [102, 103, 104],
             "volume": [1000, 1200, 1500],
-            "signal": [0, 1, -1],  # Mocked signals to trigger buy/sell
         })
 
-        # Mock the generate_signal method to return the same DataFrame
-        mock_generate_signal.return_value = pd.DataFrame({
-            "time": ["2024-12-01", "2024-12-02", "2024-12-03"],
-            "signal": [0, 1, -1],  # Ensure signals trigger trades
-        })
+        # Mock the generate_signal method to simulate dynamic signals
+        def mock_signal_generation(data):
+            if "signal" not in data.columns:
+                data["signal"] = [0] * len(data)  # Default to 0
+            # Rotate signals across iterations
+            if data["signal"].iloc[-1] == 0:
+                data["signal"] = [0, 1, 0]  # Buy signal
+            elif data["signal"].iloc[-1] == 1:
+                data["signal"] = [0, -1, 0]  # Sell signal
+            return data
+
+        mock_generate_signal.side_effect = mock_signal_generation
 
         # Initialize mock fetcher and order manager
         fetcher = DataFetcher("api_key", "api_secret", "http://mock.api")
@@ -87,5 +93,3 @@ async def test_execute_trades_with_mock_data():
             stop_loss_pct=0.02,
             take_profit_pct=0.05,
         )
-
-

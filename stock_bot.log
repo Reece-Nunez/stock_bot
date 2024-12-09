@@ -782,3 +782,74 @@
 2024-12-08T22:16:19.357265+0000 ERROR Error in trade execution loop: object DataFrame can't be used in 'await' expression
 2024-12-08T22:17:19.496236+0000 INFO Market order placed: <MagicMock name='mock.submit_order()' id='134874991570208'>
 2024-12-08T22:17:19.498549+0000 INFO Bracket order placed: <MagicMock name='mock.submit_order()' id='134874987902688'>
+2024-12-08T22:25:03.410843+0000 ERROR Failed to place market order: forbidden.
+2024-12-08T22:25:03.413074+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T22:25:03.414146+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T22:25:03.414320+0000 INFO Trade updated. Profit/Loss: -50, Strategy: rsi, Total Profit: 50
+2024-12-08T22:25:03.414691+0000 INFO Sharpe Ratio calculated: 0.33
+2024-12-08T22:25:03.417469+0000 INFO Fetching historical data for backtesting AAPL...
+2024-12-08T22:25:03.417721+0000 INFO Backtesting strategy: rsi
+2024-12-08T22:25:03.417907+0000 INFO Starting backtesting...
+2024-12-08T22:25:03.422226+0000 INFO Final Balance: $10000.00, Cumulative Returns: 0.00
+2024-12-08T22:25:03.422408+0000 INFO Results for rsi: 10000
+2024-12-08T22:25:03.425609+0000 INFO Fetching historical data for backtesting AAPL...
+2024-12-08T22:25:03.425820+0000 ERROR Error during backtesting: object DataFrame can't be used in 'await' expression
+2024-12-08T22:25:03.508054+0000 INFO Market order placed: <MagicMock name='mock.submit_order()' id='134728195514752'>
+2024-12-08T22:25:03.510264+0000 INFO Bracket order placed: <MagicMock name='mock.submit_order()' id='134728191832240'>
+2024-12-08T22:25:36.797732+0000 ERROR Failed to place market order: forbidden.
+2024-12-08T22:25:36.800100+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T22:25:36.801192+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T22:25:36.801365+0000 INFO Trade updated. Profit/Loss: -50, Strategy: rsi, Total Profit: 50
+2024-12-08T22:25:36.801761+0000 INFO Sharpe Ratio calculated: 0.33
+2024-12-08T22:25:36.804429+0000 INFO Fetching historical data for backtesting AAPL...
+2024-12-08T22:25:36.804668+0000 INFO Backtesting strategy: rsi
+2024-12-08T22:25:36.804852+0000 INFO Starting backtesting...
+2024-12-08T22:25:36.809402+0000 INFO Final Balance: $10000.00, Cumulative Returns: 0.00
+2024-12-08T22:25:36.809572+0000 INFO Results for rsi: 10000
+2024-12-08T22:25:36.812876+0000 INFO Fetching historical data for backtesting AAPL...
+2024-12-08T22:25:36.813077+0000 ERROR Error during backtesting: object DataFrame can't be used in 'await' expression
+2024-12-08T22:25:36.897269+0000 INFO Market order placed: <MagicMock name='mock.submit_order()' id='127673783231808'>
+2024-12-08T22:25:36.900129+0000 INFO Bracket order placed: <MagicMock name='mock.submit_order()' id='127673803035360'>
+2024-12-08T22:26:21.249976+0000 ERROR Failed to place market order: forbidden.
+2024-12-08T22:26:21.253355+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T22:26:21.255571+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T22:26:21.255859+0000 INFO Trade updated. Profit/Loss: -50, Strategy: rsi, Total Profit: 50
+2024-12-08T22:26:21.256292+0000 INFO Sharpe Ratio calculated: 0.33
+2024-12-08T22:26:21.259512+0000 INFO Fetching historical data for backtesting AAPL...
+2024-12-08T22:26:21.259740+0000 INFO Backtesting strategy: rsi
+2024-12-08T22:26:21.259912+0000 INFO Starting backtesting...
+2024-12-08T22:26:21.264290+0000 INFO Final Balance: $10000.00, Cumulative Returns: 0.00
+2024-12-08T22:26:21.264473+0000 INFO Results for rsi: 10000
+2024-12-08T22:26:21.267595+0000 INFO Fetching historical data for backtesting AAPL...
+2024-12-08T22:26:21.267784+0000 ERROR Error during backtesting: object DataFrame can't be used in 'await' expression
+2024-12-08T22:26:21.270100+0000 DEBUG Iteration 1: Current signal: -1, Last signal: None
+2024-12-08T22:26:21.270210+0000 INFO Signal changed to -1. Triggering trade.
+2024-12-08T22:26:21.270467+0000 ERROR Error in trade execution loop: object Mock can't be used in 'await' expression
+2024-12-08T22:27:21.318789+0000 DEBUG Iteration 2: Current signal: -1, Last signal: None
+2024-12-08T22:27:21.319006+0000 INFO Signal changed to -1. Triggering trade.
+2024-12-08T22:27:21.319199+0000 ERROR Error in trade execution loop: object Mock can't be used in 'await' expression
+2024-12-08T22:28:21.365008+0000 DEBUG Iteration 3: Current signal: -1, Last signal: None
+2024-12-08T22:28:21.365268+0000 INFO Signal changed to -1. Triggering trade.
+2024-12-08T22:28:21.365510+0000 ERROR Error in trade execution loop: object Mock can't be used in 'await' expression
+2024-12-08T22:29:21.492812+0000 INFO Market order placed: <MagicMock name='mock.submit_order()' id='127521895809536'>
+2024-12-08T22:29:21.495088+0000 INFO Bracket order placed: <MagicMock name='mock.submit_order()' id='127521900835952'>
+2024-12-08T22:32:32.761388+0000 ERROR Failed to place market order: forbidden.
+2024-12-08T22:32:32.763570+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T22:32:32.764678+0000 INFO Trade updated. Profit/Loss: 100, Strategy: rsi, Total Profit: 100
+2024-12-08T22:32:32.764859+0000 INFO Trade updated. Profit/Loss: -50, Strategy: rsi, Total Profit: 50
+2024-12-08T22:32:32.765236+0000 INFO Sharpe Ratio calculated: 0.33
+2024-12-08T22:32:32.768180+0000 INFO Fetching historical data for backtesting AAPL...
+2024-12-08T22:32:32.768431+0000 INFO Backtesting strategy: rsi
+2024-12-08T22:32:32.768887+0000 INFO Starting backtesting...
+2024-12-08T22:32:32.773035+0000 INFO Final Balance: $10000.00, Cumulative Returns: 0.00
+2024-12-08T22:32:32.773218+0000 INFO Results for rsi: 10000
+2024-12-08T22:32:32.776485+0000 INFO Fetching historical data for backtesting AAPL...
+2024-12-08T22:32:32.776697+0000 ERROR Error during backtesting: object DataFrame can't be used in 'await' expression
+2024-12-08T22:32:32.779446+0000 DEBUG Iteration 1: Current signal: 0, Last signal: None
+2024-12-08T22:32:32.779588+0000 INFO No valid signal change. No trade executed.
+2024-12-08T22:33:32.838472+0000 DEBUG Iteration 2: Current signal: 0, Last signal: 0
+2024-12-08T22:33:32.838667+0000 INFO No valid signal change. No trade executed.
+2024-12-08T22:34:32.896320+0000 DEBUG Iteration 3: Current signal: 0, Last signal: 0
+2024-12-08T22:34:32.896554+0000 INFO No valid signal change. No trade executed.
+2024-12-08T22:35:33.049480+0000 INFO Market order placed: <MagicMock name='mock.submit_order()' id='129465757224064'>
+2024-12-08T22:35:33.051936+0000 INFO Bracket order placed: <MagicMock name='mock.submit_order()' id='129465757231744'>
