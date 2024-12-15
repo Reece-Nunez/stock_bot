@@ -15,7 +15,7 @@ class DataFetcher:
         api_key = os.getenv("ALPHA_VANTAGE_API_KEY")
         url = f"https://www.alphavantage.co/query?function=SECTOR&apikey={api_key}"
         try:
-            response = requests.get(url)
+            response = requests.get(url, timeout=60)
             data = response.json()
             return data["Rank A: Real-Time Performance"]
         except Exception as e:
